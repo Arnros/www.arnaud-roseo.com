@@ -9,7 +9,6 @@
     $headers .= 'content-type: text/html; charset=iso-8859-1'."\n";
     $headers .= "From: {$to}\n";
     $headers .= "Reply-To: {$email}\n";
-    $headers .= 'CC: arnaud.roseo@protonmail.com'."\n";
     $headers .= 'X-Mailer: PHP v'.phpversion();
 
 
