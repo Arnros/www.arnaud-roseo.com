@@ -3106,6 +3106,7 @@ input, select, textarea {
 			margin-bottom: 0;
 			opacity: 1;
 			visibility: visible;
+			color: orange;
 		}
 
 			#header h1 a {
