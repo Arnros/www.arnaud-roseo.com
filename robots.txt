@@ -1,7 +1,8 @@
 User-agent: *
+Allow: /
+Allow: /sitemap.htm
+Sitemap: https://www.arnaud-roseo.com/sitemap.xml
 Disallow: /assets/
-Disallow: /images/
-Disallow: /sendmail.php
 Disallow: /generic.html
 Disallow: /elements.html
 Disallow: /html5up-solid-state.zip
