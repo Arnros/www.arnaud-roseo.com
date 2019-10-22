@@ -5,4 +5,5 @@ Sitemap: https://www.arnaud-roseo.com/sitemap.xml
 Disallow: /assets/
 Disallow: /generic.html
 Disallow: /elements.html
+Disallow: /report.html
 Disallow: /html5up-solid-state.zip
