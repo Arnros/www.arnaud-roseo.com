@@ -1,11 +1,6 @@
 User-agent: *
-Allow: /
-Allow: /index.html
-Allow: /simulateur.html
-Allow: /resultats.html
-Allow: /sitemap.xml
 Sitemap: https://www.arnaud-roseo.com/sitemap.xml
-Disallow: /assets/
+Allow: /
 Disallow: /elements.html
 Disallow: /report.html
 Disallow: /html5up-solid-state.zip
