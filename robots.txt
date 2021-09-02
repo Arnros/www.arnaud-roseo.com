@@ -2,5 +2,4 @@ User-agent: *
 Sitemap: https://www.arnaud-roseo.com/sitemap.xml
 Allow: /
 Disallow: /elements.html
-Disallow: /report.html
 Disallow: /html5up-solid-state.zip
