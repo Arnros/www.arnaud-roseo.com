@@ -193,6 +193,17 @@
       "resultat": "5ème",
       "annee": 2000,
       "courses": []
+    },
+    {
+      "nom": "Star of Karting",
+      "categorie": "KZ2",
+      "resultat": "",
+      "annee": 2014,
+      "courses": [ 
+    {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "competition": "Stars of Karting", "circuit": "Angerville", "manche": "1/3", "categorie": "KZ125", "resultat": "19ème"},
+    {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "competition": "Stars of Karting", "circuit": "Pers", "manche": "2/3", "categorie": "KZ125", "resultat": "3ème coupe CRK", "podium": true},
+    {"dateDebut": "2014-11-01", "dateFin": "2014-11-02", "competition": "Stars of Karting", "circuit": "Laval", "manche": "3/3", "categorie": "KZ125", "resultat": "11ème"}
+   ]
     }
   ],
   "courses": [
@@ -213,10 +224,7 @@
     {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "competition": "Stars of Karting", "circuit": "Varennes/Allier", "manche": "2/3", "categorie": "KZ2", "resultat": "29ème"},
     {"dateDebut": "2015-09-10", "dateFin": "2015-09-13", "competition": "Championnat du Monde", "circuit": "Le Mans", "categorie": "KZ2", "resultat": "80ème"},
     {"dateDebut": "2015-10-02", "dateFin": "2015-10-04", "competition": "Championnat de France", "circuit": "Varennes/Allier", "categorie": "KZ2", "resultat": "20ème"},
-    {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "competition": "Stars of Karting", "circuit": "Angerville", "manche": "1/3", "categorie": "KZ125", "resultat": "19ème"},
-    {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "competition": "Stars of Karting", "circuit": "Pers", "manche": "2/3", "categorie": "KZ125", "resultat": "3ème coupe CRK", "podium": true},
     {"dateDebut": "2014-10-03", "dateFin": "2014-10-06", "competition": "Championnat de France", "circuit": "Pers", "categorie": "KZ125", "resultat": "4ème coupe CRK"},
-    {"dateDebut": "2014-11-01", "dateFin": "2014-11-02", "competition": "Stars of Karting", "circuit": "Laval", "manche": "3/3", "categorie": "KZ125", "resultat": "11ème"},
     {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "competition": "Championnat de France long circuit", "circuit": "Croix en Ternois", "categorie": "KZ125", "resultat": "9ème"},
     {"dateDebut": "2013-07-19", "dateFin": "2013-07-21", "competition": "Trophée Kart Mag", "circuit": "Laval", "categorie": "KZ2", "resultat": "5ème"},
     {"dateDebut": "2013-10-03", "dateFin": "2013-10-06", "competition": "Championnat de France", "circuit": "Salbris", "categorie": "KZ125", "resultat": "25ème"},

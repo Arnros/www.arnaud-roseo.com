@@ -10,8 +10,11 @@
 	var filterCategorie = document.getElementById('filter-categorie');
 	var filterPodium = document.getElementById('filter-podium');
 	var filterReset = document.getElementById('filter-reset');
+	var expandAllBtn = document.getElementById('expand-all');
 
 	if (!container) return;
+
+	var allExpanded = false;
 
 	var allData = null;
 	var groupedByYear = {};
@@ -483,6 +486,15 @@
 
 		renderResults(filteredSeasons, yearVal !== '');
 		updateCount(totalRaces, totalPodiums);
+
+		// Réinitialiser l'état du bouton expand
+		allExpanded = false;
+		if (expandAllBtn) {
+			var icon = expandAllBtn.querySelector('.expand-icon');
+			var text = expandAllBtn.querySelector('.expand-text');
+			icon.textContent = '+';
+			text.textContent = 'Tout déplier';
+		}
 	}
 
 	function updateCount(races, podiums) {
@@ -515,6 +527,44 @@
 		applyFilters();
 	}
 
+	function toggleAllSeasons() {
+		var buttons = document.querySelectorAll('.season-btn');
+		var contents = document.querySelectorAll('.season-content');
+
+		allExpanded = !allExpanded;
+
+		buttons.forEach(function(btn) {
+			if (allExpanded) {
+				btn.classList.add('active');
+				btn.setAttribute('aria-expanded', 'true');
+			} else {
+				btn.classList.remove('active');
+				btn.setAttribute('aria-expanded', 'false');
+			}
+		});
+
+		contents.forEach(function(content) {
+			if (allExpanded) {
+				content.classList.add('active');
+			} else {
+				content.classList.remove('active');
+			}
+		});
+
+		// Mettre à jour le bouton
+		if (expandAllBtn) {
+			var icon = expandAllBtn.querySelector('.expand-icon');
+			var text = expandAllBtn.querySelector('.expand-text');
+			if (allExpanded) {
+				icon.textContent = '−';
+				text.textContent = 'Tout replier';
+			} else {
+				icon.textContent = '+';
+				text.textContent = 'Tout déplier';
+			}
+		}
+	}
+
 	// Event listeners
 	if (filterYear) filterYear.addEventListener('change', applyFilters);
 	if (filterCircuit) filterCircuit.addEventListener('change', applyFilters);
@@ -522,6 +572,7 @@
 	if (filterCategorie) filterCategorie.addEventListener('change', applyFilters);
 	if (filterPodium) filterPodium.addEventListener('change', applyFilters);
 	if (filterReset) filterReset.addEventListener('click', resetFilters);
+	if (expandAllBtn) expandAllBtn.addEventListener('click', toggleAllSeasons);
 
 	// Fetch data
 	fetch('/data/resultats.json')
