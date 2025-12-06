@@ -168,7 +168,9 @@
 				});
 			}
 
-			if (filteredSeason.courses.length > 0 || filteredSeason.info) {
+			// Only show info seasons when no course filters are active
+			var hasActiveFilters = circuitVal || competitionVal || podiumVal === 'true';
+			if (filteredSeason.courses.length > 0 || (filteredSeason.info && !hasActiveFilters)) {
 				filteredData.saisons.push(filteredSeason);
 			}
 		});
