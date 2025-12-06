@@ -1,0 +1,15 @@
+{
+  "name": "Arnaud Roséo",
+  "title": "Pilote karting KZ2",
+  "description": "Site officiel d'Arnaud Roséo, pilote karting KZ2 Master. Résultats des courses régionales, nationales et internationales. Championnat de l'Ouest et de France.",
+  "url": "https://www.arnaud-roseo.com",
+  "email": "contact@arnaud-roseo.com",
+  "themeColor": "#e63946",
+  "author": "Arnaud Roséo",
+  "locale": "fr_FR",
+  "keywords": "karting, KZ2, pilote, Arnaud Roséo, championnat France, championnat Ouest, course karting, Bretagne, simulateur iRacing",
+  "image": "/images/photos/photo01.webp",
+  "social": {
+    "strava": "https://www.strava.com/athletes/arnros"
+  }
+}

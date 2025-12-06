@@ -1,0 +1,15 @@
+# Robots.txt pour www.arnaud-roseo.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.arnaud-roseo.com/sitemap.xml
+
+# Bloquer les ressources non essentielles
+Disallow: /assets/
+Disallow: /_site/
+
+# Autoriser les images pour Google Images
+User-agent: Googlebot-Image
+Allow: /images/

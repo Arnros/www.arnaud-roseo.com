@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ title }} | {{ site.name }}</title>
+	<meta name="description" content="{{ description or site.description }}">
+	<meta name="keywords" content="{{ keywords or site.keywords }}">
+	<meta name="author" content="{{ site.author }}">
+	<meta name="theme-color" content="{{ site.themeColor }}">
+	{%- if canonical %}
+	<link rel="canonical" href="{{ site.url }}{{ canonical }}">
+	{%- endif %}
+	{%- if noindex %}
+	<meta name="robots" content="noindex, nofollow">
+	{%- else %}
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	{%- endif %}
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="{{ site.locale }}">
+	<meta property="og:site_name" content="{{ site.name }} - {{ site.title }}">
+	<meta property="og:title" content="{{ title }} | {{ site.name }}">
+	<meta property="og:description" content="{{ description or site.description }}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:image" content="{{ site.url }}{{ ogImage or site.image }}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="{{ title }} - {{ site.name }}">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ title }} | {{ site.name }}">
+	<meta name="twitter:description" content="{{ description or site.description }}">
+	<meta name="twitter:image" content="{{ site.url }}{{ ogImage or site.image }}">
+
+	<!-- Favicon -->
+	<link rel="icon" href="/favicon.ico">
+
+	<!-- Preconnect -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Fonts & CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/modern.min.css">
+
+	<!-- JSON-LD Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "{{ site.name }}",
+		"url": "{{ site.url }}",
+		"image": "{{ site.url }}{{ site.image }}",
+		"description": "{{ site.description }}",
+		"jobTitle": "{{ site.title }}",
+		"email": "{{ site.email }}",
+		"sameAs": [
+			"{{ site.social.strava }}"
+		],
+		"knowsAbout": ["Karting", "KZ2", "Course automobile", "Simulateur iRacing"]
+	}
+	</script>
+	{%- if schema %}
+	<script type="application/ld+json">
+	{{ schema | dump | safe }}
+	</script>
+	{%- endif %}
+	<script>
+	(function() {
+		var theme = localStorage.getItem('theme');
+		if (theme) {
+			document.documentElement.setAttribute('data-theme', theme);
+		}
+	})();
+	</script>
+</head>
+<body>
+	<!-- Page Loader -->
+	<div class="page-loader" id="pageLoader" aria-hidden="true">
+		<div class="loader-spinner"></div>
+	</div>
+
+	<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+	{% include "nav.njk" %}
+
+	<main id="main-content" role="main">
+	{%- if breadcrumb %}
+	<div class="container">
+		{% include "breadcrumb.njk" %}
+	</div>
+	{%- endif %}
+	{{ content | safe }}
+	</main>
+
+	{% include "footer.njk" %}
+
+	<script src="/assets/js/modern.min.js"></script>
+	{%- if extraScripts %}
+	{%- for script in extraScripts %}
+	<script src="{{ script }}"></script>
+	{%- endfor %}
+	{%- endif %}
+</body>
+</html>

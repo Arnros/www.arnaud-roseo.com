@@ -1,0 +1,20 @@
+{%- if breadcrumb %}
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+	<ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">Accueil</span></a>
+			<meta itemprop="position" content="1">
+		</li>
+		{%- for item in breadcrumb %}
+		<li class="breadcrumb-item{% if loop.last %} active{% endif %}" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			{%- if loop.last %}
+			<span itemprop="name" aria-current="page">{{ item.name }}</span>
+			{%- else %}
+			<a href="{{ item.url }}" itemprop="item"><span itemprop="name">{{ item.name }}</span></a>
+			{%- endif %}
+			<meta itemprop="position" content="{{ loop.index + 1 }}">
+		</li>
+		{%- endfor %}
+	</ol>
+</nav>
+{%- endif %}

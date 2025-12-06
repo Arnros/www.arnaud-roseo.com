@@ -1,0 +1,17 @@
+{
+  "main": [
+    { "text": "Bienvenue", "url": "/#bienvenue" },
+    { "text": "Palmarès", "url": "/palmares/" },
+    { "text": "Résultats", "url": "/resultats/" },
+    { "text": "Simulateur", "url": "/simulateur/" },
+    { "text": "Contact", "url": "/#contact" }
+  ],
+  "mobile": [
+    { "text": "Accueil", "url": "/" },
+    { "text": "Palmarès", "url": "/palmares/" },
+    { "text": "Résultats", "url": "/resultats/" },
+    { "text": "Simulateur", "url": "/simulateur/" },
+    { "text": "Photos", "url": "/#photos" },
+    { "text": "Contact", "url": "/#contact" }
+  ]
+}

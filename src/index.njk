@@ -1,0 +1,246 @@
+---
+layout: base.njk
+title: Site officiel
+description: Site officiel d'Arnaud Roséo, pilote karting KZ2 Master. Résultats, calendrier et palmarès. Championnat de l'Ouest et championnat de France.
+keywords: Arnaud Roséo, pilote karting, KZ2 Master, championnat France, championnat Ouest, karting Bretagne, course karting
+canonical: /
+ogImage: /images/photos/photo04.webp
+---
+{% from "macros.njk" import spotlightImage, galleryImage %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+	<div class="hero-bg" style="background-image: url('/images/photos/photo04.webp');"></div>
+	<div class="hero-content">
+		<span class="hero-badge">Pilote karting</span>
+		<h1 class="hero-title">Arnaud Roséo</h1>
+		<p class="hero-subtitle">Catégorie KZ2 Master</p>
+		<div class="hero-cta">
+			<a href="#bienvenue" class="btn btn-primary">Découvrir</a>
+			<a href="/resultats/" class="btn btn-outline">Voir les résultats</a>
+		</div>
+	</div>
+</section>
+
+<!-- Bienvenue Section -->
+<section class="section" id="bienvenue">
+	<div class="container">
+		<div class="spotlight fade-in">
+			<div class="spotlight-image">
+				<a href="/images/photos/photo01-fs.webp" class="gallery-item">
+					{{ spotlightImage("/images/pic01.jpg", "Arnaud Roséo - Bienvenue") }}
+				</a>
+			</div>
+			<div class="spotlight-content">
+				<span class="section-label">Bienvenue</span>
+				<h2>Pilote KZ2 depuis 2000</h2>
+				<p>Je suis pilote de karting et j'évolue en <strong>KZ2</strong>, la catégorie la plus exigeante. Puissance, technique et adrénaline : un cocktail qui ne laisse aucune place à l'erreur.</p>
+				<p>Le KZ2, c'est l'essence même du karting : des accélérations brutales, une précision au millimètre. Sur un kart doté d'un moteur <strong>125 cc à boîte 6 vitesses</strong>, chaque tour devient un combat entre technique, instinct et détermination.</p>
+				<p>Je participe aux <strong>championnats régionaux et nationaux</strong>, et j'ai vécu l'expérience unique de <strong>deux compétitions mondiales</strong> — un privilège qui pousse à viser toujours plus haut.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Présentation Section -->
+<section class="section section-alt" id="presentation">
+	<div class="container">
+		<div class="spotlight spotlight-reverse fade-in">
+			<div class="spotlight-image">
+				<a href="/images/photos/photo02-fs.webp" class="gallery-item">
+					{{ spotlightImage("/images/pic02.jpg", "Arnaud Roséo - Présentation") }}
+				</a>
+			</div>
+			<div class="spotlight-content">
+				<span class="section-label">Présentation</span>
+				<h2>Du régional au mondial</h2>
+				<p>J'ai débuté le karting en 2000 à l'âge de 14 ans. Depuis, je n'ai cessé de progresser et de me confronter aux meilleurs pilotes de ma catégorie.</p>
+				<p>Au-delà du <strong>championnat de l'Ouest</strong> et du <strong>championnat de France</strong>, j'ai eu l'opportunité de représenter les couleurs françaises lors de plusieurs <strong>championnats du monde KZ2</strong>, une expérience unique au plus haut niveau international.</p>
+				<p>Entre les courses, je perfectionne mon pilotage sur <a href="/simulateur/">simulateur professionnel</a>. Un outil devenu indispensable pour travailler les réflexes, la gestion de course et rester compétitif.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Statistiques Section -->
+<section class="stats-section" id="stats">
+	<div class="container">
+		<div class="stats-grid fade-in">
+			<div class="stat-item">
+				<span class="stat-number" data-target="25">0</span>
+				<span class="stat-label">Années d'expérience</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="40">0</span>
+				<span class="stat-label">Podiums</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="3">0</span>
+				<span class="stat-label">Titres régionaux</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="2">0</span>
+				<span class="stat-label">Championnats du monde</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Informations Section -->
+<section class="section" id="informations">
+	<div class="container">
+		<div class="spotlight fade-in">
+			<div class="spotlight-image">
+				<a href="/images/photos/photo03-fs.webp" class="gallery-item">
+					{{ spotlightImage("/images/pic03.jpg", "Arnaud Roséo - Informations") }}
+				</a>
+			</div>
+			<div class="spotlight-content">
+				<span class="section-label">Informations</span>
+				<h2>Profil du pilote</h2>
+				<ul class="info-list">
+					<li class="info-item">
+						<span class="info-label">Naissance</span>
+						<span class="info-value">9 avril 1986</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Résidence</span>
+						<span class="info-value">Rennes</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Qualités</span>
+						<span class="info-value">Rigoureux, persévérant</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Hobbies</span>
+						<span class="info-value">Apnée, course à pied, cuisine</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Débuts karting</span>
+						<span class="info-value">2000 en cadet</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Catégorie</span>
+						<span class="info-value">KZ2 Master</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Châssis</span>
+						<span class="info-value">Alpha karting</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Moteur</span>
+						<span class="info-value">TM R1</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Préparateur</span>
+						<span class="info-value">Tec-Sav</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Club</span>
+						<span class="info-value">ASK Laval</span>
+					</li>
+					<li class="info-item">
+						<span class="info-label">Circuit préféré</span>
+						<span class="info-value">Laval (F)</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Calendrier Section -->
+<section class="section section-alt" id="calendrier">
+	<div class="container">
+		<div class="section-header fade-in">
+			<span class="section-label">Calendrier</span>
+			<h2 class="section-title">Saison 2024</h2>
+			<p class="section-description">Retrouvez les dates des courses pour la saison en cours</p>
+		</div>
+		<div class="calendar-grid fade-in">
+			<div class="calendar-card">
+				<h4>Championnat de l'Ouest</h4>
+				<ul class="calendar-list">
+					<li>16-17 mars - Lohéac</li>
+					<li>06-07 avril - Le Mans</li>
+					<li>27-28 avril - Pléssé</li>
+					<li>25-26 mai - Ancenis</li>
+				</ul>
+			</div>
+			<div class="calendar-card">
+				<h4>Championnat de France</h4>
+				<ul class="calendar-list">
+					<li>20-22 septembre - Laval</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Partenaires Section -->
+<section class="section section-alt" id="partenaires">
+	<div class="container">
+		<div class="section-header fade-in">
+			<span class="section-label">Partenaires</span>
+			<h2 class="section-title">Ils me soutiennent</h2>
+		</div>
+		<div class="partners-grid fade-in">
+			<div class="partner-card">
+				<a href="https://lmsys.fr" target="_blank" rel="noopener" class="partner-logo">
+					<img src="/images/partenaires/lmsys.webp" alt="LMsys IT Services" loading="lazy">
+				</a>
+				<div class="partner-content">
+					<h4>LMsys</h4>
+					<p>Expert en déploiement de systèmes multimédia pour les grands groupes de télécommunication. LMsys met son expertise en systèmes et réseaux au service de projets d'envergure internationale.</p>
+					<a href="https://lmsys.fr" target="_blank" rel="noopener" class="btn btn-outline">Visiter</a>
+				</div>
+			</div>
+			<div class="partner-card">
+				<a href="https://www.falcon-rs.com" target="_blank" rel="noopener" class="partner-logo">
+					<img src="/images/partenaires/tecsav.webp" alt="Tec-Sav Falcon RS" loading="lazy">
+				</a>
+				<div class="partner-content">
+					<h4>Tec-Sav</h4>
+					<p>Référence mondiale de la préparation moteur 2 temps, avec <strong>6 titres de champion du monde</strong>. Tec-Sav assure l'entretien et la préparation de mon moteur TM R1.</p>
+					<a href="https://www.falcon-rs.com" target="_blank" rel="noopener" class="btn btn-outline">Visiter</a>
+				</div>
+			</div>
+			<div class="partner-card">
+				<div class="partner-logo">
+					{{ spotlightImage("/images/pic07.jpg", "Votre entreprise") }}
+				</div>
+				<div class="partner-content">
+					<h4>Votre entreprise</h4>
+					<p>Associez votre image à un pilote passionné et compétitif. Votre logo sur mon kart, ma combinaison et une visibilité sur l'ensemble de mes supports de communication.</p>
+					<a href="#contact" class="btn btn-primary">Me contacter</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Photos Section -->
+<section class="section section-alt" id="photos">
+	<div class="container">
+		<div class="section-header fade-in">
+			<span class="section-label">Galerie</span>
+			<h2 class="section-title">Photos</h2>
+		</div>
+		<div class="gallery fade-in">
+			{{ galleryImage("/images/photos/photo01.jpg", "/images/photos/photo01-fs.jpg", "Arnaud Roséo - Salbris", "Arnaud Roséo - Salbris", "gallery-item gallery-full") }}
+			{{ galleryImage("/images/photos/photo02.jpg", "/images/photos/photo02-fs.jpg", "Arnaud Roséo - KZ2", "Arnaud Roséo - KZ2", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo03.jpg", "/images/photos/photo03-fs.jpg", "Arnaud Roséo - championnat de France", "Arnaud Roséo - championnat de France", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo07.jpg", "/images/photos/photo07-fs.jpg", "Arnaud Roséo - championnat du Monde", "Arnaud Roséo - championnat du Monde", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo06.jpg", "/images/photos/photo06-fs.jpg", "Arnaud Roséo - championnat du Monde", "Arnaud Roséo - championnat du Monde", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo04.jpg", "/images/photos/photo04-fs.jpg", "Arnaud Roséo - championnat de France", "Arnaud Roséo - championnat de France", "gallery-item gallery-full") }}
+			{{ galleryImage("/images/photos/photo08.jpg", "/images/photos/photo08-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo09.jpg", "/images/photos/photo09-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo10.jpg", "/images/photos/photo10-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo11.jpg", "/images/photos/photo11-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo12.jpg", "/images/photos/photo12-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+			{{ galleryImage("/images/photos/photo13.jpg", "/images/photos/photo13-fs.jpg", "Arnaud Roséo - championnat de l'Ouest", "Arnaud Roséo - championnat de l'Ouest", "gallery-item gallery-half") }}
+		</div>
+	</div>
+</section>
+
+{% include "contact.njk" %}

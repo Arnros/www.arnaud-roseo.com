@@ -1,0 +1,26 @@
+{# Macro pour images spotlight #}
+{% macro spotlightImage(src, alt, loading="lazy") %}
+{%- set basePath = src | replace(".jpg", "") | replace(".png", "") | replace(".webp", "") -%}
+<img
+	src="{{ basePath }}.webp"
+	srcset="{{ basePath }}-320w.webp 320w,
+			{{ basePath }}.webp 500w"
+	sizes="(max-width: 768px) 100vw, 500px"
+	alt="{{ alt }}"
+	loading="{{ loading }}">
+{% endmacro %}
+
+{# Macro pour images galerie #}
+{% macro galleryImage(src, fullSrc, alt, title, className="gallery-item") %}
+{%- set basePath = src | replace(".jpg", "") | replace(".png", "") | replace(".webp", "") -%}
+{%- set fullPath = fullSrc | replace(".jpg", ".webp") | replace(".png", ".webp") -%}
+<a href="{{ fullPath }}" class="{{ className }}" title="{{ title }}">
+	<img
+		src="{{ basePath }}.webp"
+		srcset="{{ basePath }}-320w.webp 320w,
+				{{ basePath }}.webp 640w"
+		sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+		alt="{{ alt }}"
+		loading="lazy">
+</a>
+{% endmacro %}

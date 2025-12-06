@@ -1,0 +1,76 @@
+---
+layout: base.njk
+title: Résultats
+description: Palmarès et résultats d'Arnaud Roséo en karting KZ2. Championnat de France, championnat de l'Ouest, courses nationales depuis 2000.
+keywords: résultats karting, palmarès KZ2, championnat France karting, championnat Ouest, Arnaud Roséo résultats
+canonical: /resultats/
+ogImage: /images/photos/photo04.webp
+breadcrumb:
+  - name: Résultats
+    url: /resultats/
+extraScripts:
+  - /assets/js/resultats.min.js
+schema:
+  "@context": "https://schema.org"
+  "@type": "BreadcrumbList"
+  itemListElement:
+    - "@type": "ListItem"
+      position: 1
+      name: "Accueil"
+      item: "https://www.arnaud-roseo.com/"
+    - "@type": "ListItem"
+      position: 2
+      name: "Résultats"
+      item: "https://www.arnaud-roseo.com/resultats/"
+---
+<section class="section results-section">
+	<div class="container">
+		<div class="section-header fade-in">
+			<span class="section-label">Palmarès</span>
+			<h1 class="section-title">Résultats</h1>
+			<p class="section-description">Tous les résultats depuis 2000</p>
+		</div>
+
+		<!-- Filtres -->
+		<div class="results-filters fade-in" id="results-filters">
+			<div class="filter-group">
+				<label for="filter-year">Année</label>
+				<select id="filter-year" class="filter-select">
+					<option value="">Toutes les années</option>
+				</select>
+			</div>
+			<div class="filter-group">
+				<label for="filter-circuit">Circuit</label>
+				<select id="filter-circuit" class="filter-select">
+					<option value="">Tous les circuits</option>
+				</select>
+			</div>
+			<div class="filter-group">
+				<label for="filter-competition">Compétition</label>
+				<select id="filter-competition" class="filter-select">
+					<option value="">Toutes les compétitions</option>
+				</select>
+			</div>
+			<div class="filter-group">
+				<label for="filter-podium">Podiums uniquement</label>
+				<select id="filter-podium" class="filter-select">
+					<option value="">Tous les résultats</option>
+					<option value="true">Podiums seulement</option>
+				</select>
+			</div>
+			<button type="button" class="filter-reset" id="filter-reset">Réinitialiser</button>
+		</div>
+
+		<div class="results-count fade-in" id="results-count"></div>
+
+		<div id="resultats-container" class="fade-in">
+			<p class="loading-text">Chargement des résultats...</p>
+		</div>
+	</div>
+</section>
+
+<section class="section section-alt">
+	<div class="container">
+		{% include "partners.njk" %}
+	</div>
+</section>

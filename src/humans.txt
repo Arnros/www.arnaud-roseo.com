@@ -1,0 +1,17 @@
+/* TEAM */
+Pilote: Arnaud Roséo
+Site: https://www.arnaud-roseo.com
+Contact: contact@arnaud-roseo.com
+Location: Rennes, France
+
+/* SITE */
+Last update: 2024/12/06
+Standards: HTML5, CSS3, JavaScript ES6
+Components: Eleventy, Nunjucks
+Software: Visual Studio Code
+
+/* KARTING */
+Category: KZ2 Master
+Chassis: Alpha Karting
+Engine: TM R1
+Club: ASK Laval

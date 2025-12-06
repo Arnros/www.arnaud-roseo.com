@@ -1,0 +1,28 @@
+# Redirections 301 - Netlify / Cloudflare Pages
+# Format: /old-path /new-path 301
+
+# Anciennes URLs potentielles
+/index.html          /                    301
+/accueil             /                    301
+/home                /                    301
+/results             /resultats/          301
+/result              /resultats/          301
+/simulator           /simulateur/         301
+/simu                /simulateur/         301
+/career              /palmares/           301
+/carriere            /palmares/           301
+/achievements        /palmares/           301
+/contact             /#contact            301
+/photos              /#photos             301
+/galerie             /#photos             301
+/gallery             /#photos             301
+/calendar            /#calendrier         301
+/calendrier          /#calendrier         301
+
+# Handle trailing slashes
+/resultats           /resultats/          301
+/simulateur          /simulateur/         301
+/palmares            /palmares/           301
+
+# 404 fallback
+/*                   /404.html            404
