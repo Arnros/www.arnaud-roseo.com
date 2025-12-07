@@ -1,7 +1,7 @@
 {
   "competitions": [
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2",
       "niveau": "regional",
       "resultat": "15",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2 Master",
       "niveau": "regional",
       "resultat": "3",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "nom": "Coupe du monde",
+      "nom": "Coupe du Monde",
       "categorie": "KZ2 Master",
       "niveau": "international",
       "courses": [
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2 Master",
       "niveau": "regional",
       "resultat": "3",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2 Master",
       "niveau": "regional",
       "resultat": "5",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2 Master",
       "niveau": "regional",
       "resultat": "2",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2",
       "niveau": "regional",
       "resultat": "2",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2",
       "niveau": "regional",
       "resultat": "1",
@@ -189,7 +189,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ2",
       "niveau": "regional",
       "resultat": "6",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ125",
       "niveau": "regional",
       "resultat": "7",
@@ -264,7 +264,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ125",
       "niveau": "regional",
       "resultat": "5",
@@ -279,7 +279,7 @@
       "categorie": "KZ125",
       "niveau": "national",
       "courses": [
-        {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "circuit": "Croix en Ternois", "chrono": "8", "cumul": "8", "prefinale": "8", "finale": "9"}
+        {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "circuit": "Croix-en-Ternois", "chrono": "8", "cumul": "8", "prefinale": "8", "finale": "9"}
       ]
     },
     {
@@ -307,14 +307,14 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ125",
       "niveau": "regional",
       "resultat": "3",
       "annee": 2009
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "KZ125",
       "niveau": "regional",
       "resultat": "2",
@@ -329,7 +329,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "3",
@@ -344,7 +344,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "3",
@@ -375,7 +375,7 @@
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "7",
@@ -386,7 +386,7 @@
       "categorie": "N125",
       "niveau": "national",
       "courses": [
-        {"dateDebut": "2005-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"},
+        {"dateDebut": "2005-01-01", "circuit": "Croix-en-Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"},
         {"dateDebut": "2005-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "finaleB": "2"}
       ]
     },
@@ -414,7 +414,7 @@
       "annee": 2004
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "3",
@@ -425,7 +425,7 @@
       "categorie": "N125",
       "niveau": "national",
       "courses": [
-        {"dateDebut": "2004-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "14"},
+        {"dateDebut": "2004-01-01", "circuit": "Croix-en-Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "14"},
         {"dateDebut": "2004-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "prefinale": "", "finale": "6"}
       ]
     },
@@ -453,7 +453,7 @@
       "annee": 2003
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "10",
@@ -464,11 +464,11 @@
       "categorie": "N125",
       "niveau": "national",
       "courses": [
-        {"dateDebut": "2003-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "finaleB": "1"}
+        {"dateDebut": "2003-01-01", "circuit": "Croix-en-Ternois", "chrono": "", "cumul": "", "finaleB": "1"}
       ]
     },
     {
-      "nom": "Championnat de l'ouest",
+      "nom": "Championnat de l'Ouest",
       "categorie": "N125",
       "niveau": "regional",
       "resultat": "8",
@@ -486,7 +486,7 @@
       "categorie": "N125",
       "niveau": "national",
       "courses": [
-        {"dateDebut": "2002-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+        {"dateDebut": "2002-01-01", "circuit": "Croix-en-Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
     },
     {
