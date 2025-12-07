@@ -299,9 +299,12 @@
 			if (season.competitions && season.competitions.length > 0) {
 				season.competitions.forEach(function(comp) {
 					var hasResultat = comp.resultat && comp.resultat.length > 0;
+					var niveau = comp.niveau || 'regional';
+					var niveauLabel = niveau === 'international' ? 'Mondial' : (niveau === 'national' ? 'France' : 'Régional');
 
 					html += '<div class="competition-block">';
-					html += '<div class="classement-header">';
+					html += '<div class="classement-header niveau-' + niveau + '">';
+					html += '<span class="niveau-badge niveau-badge-' + niveau + '">' + niveauLabel + '</span>';
 					html += '<span class="classement-competition">' + comp.nom + '</span>';
 					html += '<span class="classement-categorie">' + comp.categorie + '</span>';
 					if (hasResultat) {
@@ -482,6 +485,7 @@
 						nom: comp.nom,
 						categorie: comp.categorie,
 						resultat: comp.resultat,
+						niveau: comp.niveau,
 						courses: []
 					};
 
