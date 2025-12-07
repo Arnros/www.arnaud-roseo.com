@@ -41,8 +41,8 @@
 	// Ordre des colonnes (les colonnes non listées apparaissent avant finale)
 	var columnOrder = [
 		'date', 'circuit', 'categorie',
-		'chrono', 'm1', 'm2', 'm3', 'cumul', 'prefinale',
-		'finale 1', 'finale 2', 'finale 3', 'finale', 'finaleB'
+		'chrono', 'm1', 'm2', 'm3', 'cumul', 'prefinale', 'finaleB',
+		'finale 1', 'finale 2', 'finale 3', 'finale'
 	];
 
 	// Colonnes à ignorer (métadonnées et colonnes affichées dans l'en-tête)

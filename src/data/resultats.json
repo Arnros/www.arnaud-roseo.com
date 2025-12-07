@@ -7,9 +7,9 @@
       "annee": 2024,
       "resultat": "15",
       "courses": [
-        {"dateDebut": "2024-03-16", "dateFin": "2024-03-17", "circuit": "Lohéac", "pays": "FR", "manche": "1/4", "categorie": "KZ2 Master", "chrono": "5", "cumul": "", "prefinale": "", "finale": "5"},
-        {"dateDebut": "2024-04-06", "dateFin": "2024-04-07", "circuit": "Le Mans", "pays": "FR", "manche": "2/4", "categorie": "KZ2", "chrono": "14", "cumul": "", "prefinale": "", "finale": "6"},
-        {"dateDebut": "2024-05-25", "dateFin": "2024-05-26", "circuit": "Ancenis", "pays": "FR", "manche": "4/4", "categorie": "KZ2", "chrono": "4", "cumul": "8", "prefinale": "", "finale": "4"}
+        {"dateDebut": "2024-03-16", "dateFin": "2024-03-17", "circuit": "Lohéac", "pays": "FR", "manche": "1/4", "categorie": "KZ2 Master", "chrono": "5", "cumul": "", "prefinale": "6", "finale": "5"},
+        {"dateDebut": "2024-04-06", "dateFin": "2024-04-07", "circuit": "Le Mans", "pays": "FR", "manche": "2/4", "categorie": "KZ2", "chrono": "14", "cumul": "", "prefinale": "9", "finale": "6"},
+        {"dateDebut": "2024-05-25", "dateFin": "2024-05-26", "circuit": "Ancenis", "pays": "FR", "manche": "4/4", "categorie": "KZ2", "chrono": "4", "cumul": "8", "prefinale": "6", "finale": "4"}
       ]
     },
     {
@@ -96,7 +96,7 @@
       "courses": [
         {"dateDebut": "2018-03-17", "dateFin": "2018-03-18", "circuit": "Le Mans", "pays": "FR", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "2"},
         {"dateDebut": "2018-04-07", "dateFin": "2018-04-08", "circuit": "Lohéac", "pays": "FR", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "2"},
-        {"dateDebut": "2018-04-28", "dateFin": "2018-04-29", "circuit": "Ancenis", "pays": "FR", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "25", "finale": "7"},
+        {"dateDebut": "2018-04-28", "dateFin": "2018-04-29", "circuit": "Ancenis", "pays": "FR", "manche": "3/4", "chrono": "6", "cumul": "6", "prefinale": "25", "finale": "7"},
         {"dateDebut": "2018-06-02", "dateFin": "2018-06-03", "circuit": "Laval", "pays": "FR", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "24", "finale": "4"}
       ]
     },
