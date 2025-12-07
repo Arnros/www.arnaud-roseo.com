@@ -31,8 +31,16 @@ schema:
 			<p class="section-description">Tous les résultats depuis 2000</p>
 		</div>
 
-		<!-- Statistiques globales -->
-		<div class="results-stats fade-in" id="results-stats"></div>
+		<!-- Statistiques globales (générées au build) -->
+		<div class="results-stats fade-in" id="results-stats">
+			<div class="stats-grid">
+				<div class="stat-item"><span class="stat-value">{{ stats.podiums }}</span><span class="stat-label">Podiums</span></div>
+				<div class="stat-item"><span class="stat-value">{{ stats.top3Regionaux }}</span><span class="stat-label">TOP 3 régionaux</span></div>
+				<div class="stat-item"><span class="stat-value">{{ stats.top10Nationaux }}</span><span class="stat-label">TOP 10 France</span></div>
+				<div class="stat-item"><span class="stat-value">{{ stats.participationsMondiaux }}</span><span class="stat-label">Championnats du monde</span></div>
+				<div class="stat-item"><span class="stat-value">{{ stats.circuits }}</span><span class="stat-label">Circuits</span></div>
+			</div>
+		</div>
 
 		<!-- Filtres -->
 		<div class="results-filters fade-in" id="results-filters">
