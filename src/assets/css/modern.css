@@ -656,6 +656,8 @@ textarea:focus {
 	overflow: hidden;
 	border: 1px solid var(--color-border);
 	transition: var(--transition);
+	display: flex;
+	flex-direction: column;
 }
 
 .partner-card:hover {
@@ -686,6 +688,13 @@ textarea:focus {
 
 .partner-content {
 	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.partner-content .btn {
+	margin-top: auto;
 }
 
 .partner-content h4 {
