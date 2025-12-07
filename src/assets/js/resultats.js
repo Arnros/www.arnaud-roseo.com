@@ -46,7 +46,24 @@
 	];
 
 	// Colonnes à ignorer (métadonnées et colonnes affichées dans l'en-tête)
-	var ignoredColumns = ['dateDebut', 'dateFin', 'manche', 'annee', 'nom', 'courses', 'competition', 'dnf', 'annulee'];
+	var ignoredColumns = ['dateDebut', 'dateFin', 'manche', 'annee', 'nom', 'courses', 'competition', 'dnf', 'annulee', 'pays'];
+
+	// Emoji drapeaux par code pays
+	var countryFlags = {
+		'FR': '🇫🇷',
+		'IT': '🇮🇹',
+		'DE': '🇩🇪',
+		'BE': '🇧🇪',
+		'ES': '🇪🇸',
+		'GB': '🇬🇧',
+		'NL': '🇳🇱',
+		'PT': '🇵🇹'
+	};
+
+	// Convertir un code pays en emoji drapeau
+	function getFlag(countryCode) {
+		return countryFlags[countryCode] || '';
+	}
 
 	// Colonnes de position (à afficher avec badge Pvaleur)
 	var positionColumns = ['chrono', 'cumul', 'prefinale', 'finale', 'finale 1', 'finale 2', 'finale 3', 'finaleB', 'm1', 'm2', 'm3'];
@@ -210,8 +227,15 @@
 				} else {
 					val = course[col] || '';
 				}
-				if (col === 'circuit' && course.manche) {
-					val = val ? val + ' ' + course.manche : course.manche;
+				if (col === 'circuit') {
+					// Ajouter le drapeau du pays
+					if (course.pays) {
+						val = getFlag(course.pays) + ' ' + val;
+					}
+					// Ajouter la manche
+					if (course.manche) {
+						val = val + ' ' + course.manche;
+					}
 				}
 				// Colonnes de position : formater avec badge Pvaleur
 				var isPositionCol = positionColumns.indexOf(col) !== -1;
