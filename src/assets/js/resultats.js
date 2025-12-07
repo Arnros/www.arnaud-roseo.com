@@ -21,16 +21,43 @@
 
 	var moisFR = ['jan.', 'fév.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
 
+	// Labels personnalisés pour les colonnes (les autres utilisent le nom de la clé avec majuscule)
 	var columnLabels = {
 		date: 'Date',
-		competition: 'Compétition',
 		circuit: 'Circuit',
 		categorie: 'Catégorie',
+		chrono: 'Chrono',
+		m1: 'M1',
+		m2: 'M2',
+		m3: 'M3',
 		cumul: 'Cumul',
 		prefinale: 'Pré-Finale',
+		'finale 1': 'Finale 1',
+		'finale 2': 'Finale 2',
+		'finale 3': 'Finale 3',
 		finale: 'Finale',
-		resultat: 'Résultat'
+		finaleB: 'Finale B'
 	};
+
+	// Ordre des colonnes (les colonnes non listées apparaissent avant finale)
+	var columnOrder = [
+		'date', 'circuit', 'categorie',
+		'chrono', 'm1', 'm2', 'm3', 'cumul', 'prefinale',
+		'finale 1', 'finale 2', 'finale 3', 'finale', 'finaleB'
+	];
+
+	// Colonnes à ignorer (métadonnées et colonnes affichées dans l'en-tête)
+	var ignoredColumns = ['dateDebut', 'dateFin', 'manche', 'annee', 'nom', 'courses', 'competition', 'dnf', 'annulee'];
+
+	// Colonnes de position (à afficher avec badge Pvaleur)
+	var positionColumns = ['chrono', 'cumul', 'prefinale', 'finale', 'finale 1', 'finale 2', 'finale 3', 'finaleB', 'm1', 'm2', 'm3'];
+
+	// Générer un label pour une colonne
+	function getColumnLabel(col) {
+		if (columnLabels[col]) return columnLabels[col];
+		// Capitaliser la première lettre
+		return col.charAt(0).toUpperCase() + col.slice(1);
+	}
 
 	// Formater une date ISO en français
 	function formatDate(dateDebut, dateFin) {
@@ -59,56 +86,115 @@
 		return parseInt(dateStr.substring(0, 4), 10);
 	}
 
-	// Emoji podium
-	function addPodiumEmoji(val) {
+	// Formater une position en badge Pvaleur
+	function formatPosition(val) {
+		if (!val) return '';
 		var valLower = val.toLowerCase();
-		if (valLower.indexOf('1er') !== -1 || valLower.indexOf('vainqueur') !== -1 || valLower === 'champion') {
-			return '🥇 ' + val;
-		} else if (valLower.indexOf('2ème') !== -1 || valLower === 'vice-champion') {
-			return '🥈 ' + val;
-		} else if (valLower.indexOf('3ème') !== -1) {
-			return '🥉 ' + val;
+
+		// Valeurs spéciales sans badge
+		if (valLower === 'dns' || valLower === 'dnf' || valLower === 'annulée' || val === '') {
+			return val;
 		}
+
+		// 1er / vainqueur - badge or
+		if (valLower === '1er' || valLower === 'vainqueur') {
+			return '<span class="position-badge position-1">P1</span>';
+		}
+
+		// Valeur numérique ou commençant par un nombre
+		var match = val.match(/^(\d+)/);
+		if (match) {
+			var num = match[1];
+			var reste = val.substring(num.length).trim();
+			var badgeClass = 'position-badge';
+			var numInt = parseInt(num, 10);
+			// Toujours colorer les positions 1, 2, 3
+			if (numInt <= 3) {
+				badgeClass += ' position-' + num;
+			}
+			var badge = '<span class="' + badgeClass + '">P' + num + '</span>';
+			return reste ? badge + ' ' + reste : badge;
+		}
+
+		// Autres valeurs textuelles (ex: "coupe CRK")
 		return val;
 	}
 
-	function getPodiumEmoji(result) {
-		var resultLower = (result || '').toLowerCase();
-		if (resultLower.indexOf('1er') !== -1 || resultLower.indexOf('vainqueur') !== -1 || resultLower === 'champion') {
-			return '🥇 ';
-		} else if (resultLower.indexOf('2ème') !== -1 || resultLower === 'vice-champion') {
-			return '🥈 ';
-		} else if (resultLower.indexOf('3ème') !== -1) {
-			return '🥉 ';
+	// Formater le résultat d'une compétition avec badge
+	function formatCompetitionResult(val) {
+		if (!val) return '';
+
+		// Valeur numérique
+		var match = val.match(/^(\d+)/);
+		if (match) {
+			var num = match[1];
+			var reste = val.substring(num.length).trim();
+			var badgeClass = 'result-badge';
+			var numInt = parseInt(num, 10);
+			// Toujours colorer les positions 1, 2, 3
+			if (numInt <= 3) {
+				badgeClass += ' result-' + num;
+			}
+			var badge = '<span class="' + badgeClass + '">P' + num + '</span>';
+			return reste ? badge + ' ' + reste : badge;
 		}
-		return '';
+
+		return val;
 	}
 
 	function isVictoire(result) {
 		var r = (result || '').toLowerCase();
-		return r.indexOf('1er') !== -1 || r.indexOf('vainqueur') !== -1 || r === 'champion';
+		return r === '1' || r === '1er' || r.indexOf('vainqueur') !== -1;
 	}
 
-	// Détecter les colonnes à afficher pour une liste de courses
-	function detectColumns(courses, includeCompetition) {
-		var cols = ['date'];
-		if (includeCompetition) cols.push('competition');
-		cols.push('circuit');
+	// Détecter si une position est un podium (1, 2 ou 3)
+	function isPodium(val) {
+		if (!val) return false;
+		var valLower = val.toLowerCase();
+		if (valLower === '1er' || valLower === 'vainqueur') return true;
+		var match = val.match(/^(\d+)/);
+		if (match) {
+			var num = parseInt(match[1], 10);
+			return num >= 1 && num <= 3;
+		}
+		return false;
+	}
 
-		var hasCat = courses.some(function(c) { return c.categorie; });
-		if (hasCat) cols.push('categorie');
+	// Détecter automatiquement les colonnes à afficher pour une liste de courses
+	function detectColumns(courses) {
+		// Collecter toutes les colonnes présentes dans les données
+		var foundColumns = new Set();
+		courses.forEach(function(course) {
+			Object.keys(course).forEach(function(key) {
+				if (ignoredColumns.indexOf(key) === -1 && course[key]) {
+					foundColumns.add(key);
+				}
+			});
+		});
 
-		var hasCumul = courses.some(function(c) { return c.cumul; });
-		if (hasCumul) cols.push('cumul');
+		// Construire la liste ordonnée
+		var cols = ['date', 'circuit'];
 
-		var hasPrefinale = courses.some(function(c) { return c.prefinale; });
-		if (hasPrefinale) cols.push('prefinale');
+		// Ajouter les colonnes dans l'ordre défini
+		columnOrder.forEach(function(col) {
+			if (col === 'date' || col === 'circuit') return;
+			if (foundColumns.has(col)) {
+				cols.push(col);
+			}
+		});
 
-		var hasFinale = courses.some(function(c) { return c.finale; });
-		var hasResultat = courses.some(function(c) { return c.resultat; });
-
-		if (hasFinale) cols.push('finale');
-		else if (hasResultat) cols.push('resultat');
+		// Ajouter les colonnes non listées dans columnOrder (nouvelles colonnes)
+		foundColumns.forEach(function(col) {
+			if (cols.indexOf(col) === -1) {
+				// Insérer avant finale/resultat
+				var insertIndex = cols.length;
+				var finaleIndex = cols.indexOf('finale');
+				var resultatIndex = cols.indexOf('resultat');
+				if (finaleIndex !== -1) insertIndex = finaleIndex;
+				else if (resultatIndex !== -1) insertIndex = resultatIndex;
+				cols.splice(insertIndex, 0, col);
+			}
+		});
 
 		return cols;
 	}
@@ -117,8 +203,7 @@
 	function renderCourseRows(coursesList, colsList) {
 		var rowsHtml = '';
 		coursesList.forEach(function(course) {
-			var rowClass = course.podium ? ' class="result-podium"' : '';
-			rowsHtml += '<tr' + rowClass + '>';
+			rowsHtml += '<tr>';
 			colsList.forEach(function(col) {
 				var val = '';
 				if (col === 'date') {
@@ -129,12 +214,20 @@
 				if (col === 'circuit' && course.manche) {
 					val = val ? val + ' ' + course.manche : course.manche;
 				}
-				var isPodiumCol = course.podium && (col === 'finale' || col === 'resultat');
-				if (isPodiumCol && val) {
-					val = addPodiumEmoji(val);
+				// Colonnes de position : formater avec badge Pvaleur
+				var isPositionCol = positionColumns.indexOf(col) !== -1;
+				if (isPositionCol && val) {
+					val = formatPosition(val);
 				}
-				var cellClass = isPodiumCol ? ' class="result-highlight"' : '';
-				rowsHtml += '<td' + cellClass + '>' + val + '</td>';
+				// Ajouter badges statut sur la finale
+				if (col === 'finale') {
+					if (course.dnf) {
+						val += ' <span class="status-badge status-dnf">DNF</span>';
+					} else if (course.annulee) {
+						val = '<span class="status-badge status-annulee">Annulée</span>';
+					}
+				}
+				rowsHtml += '<td>' + val + '</td>';
 			});
 			rowsHtml += '</tr>';
 		});
@@ -179,54 +272,32 @@
 		} else {
 			var html = '';
 
-			// Afficher les championnats
-			if (season.championnats && season.championnats.length > 0) {
-				season.championnats.forEach(function(champ) {
-					var emoji = champ.podium ? getPodiumEmoji(champ.resultat) : '';
-					var podiumClass = champ.podium ? ' classement-podium' : '';
+			// Afficher toutes les compétitions
+			if (season.competitions && season.competitions.length > 0) {
+				season.competitions.forEach(function(comp) {
+					var hasResultat = comp.resultat && comp.resultat.length > 0;
 
 					html += '<div class="competition-block">';
-					html += '<div class="classement-header' + podiumClass + '">';
-					html += '<span class="classement-competition">' + champ.nom + '</span>';
-					html += '<span class="classement-categorie">' + champ.categorie + '</span>';
-					html += '<span class="classement-result">' + emoji + champ.resultat + '</span>';
+					html += '<div class="classement-header">';
+					html += '<span class="classement-competition">' + comp.nom + '</span>';
+					html += '<span class="classement-categorie">' + comp.categorie + '</span>';
+					if (hasResultat) {
+						html += '<span class="classement-result">' + formatCompetitionResult(comp.resultat) + '</span>';
+					}
 					html += '</div>';
 
-					if (champ.courses && champ.courses.length > 0) {
-						var cols = detectColumns(champ.courses, false);
+					if (comp.courses && comp.courses.length > 0) {
+						var cols = detectColumns(comp.courses);
 						html += '<div class="table-container"><table><thead><tr>';
 						cols.forEach(function(col) {
-							html += '<th>' + (columnLabels[col] || col) + '</th>';
+							html += '<th>' + getColumnLabel(col) + '</th>';
 						});
 						html += '</tr></thead><tbody>';
-						html += renderCourseRows(champ.courses, cols);
+						html += renderCourseRows(comp.courses, cols);
 						html += '</tbody></table></div>';
 					}
 					html += '</div>';
 				});
-			}
-
-			// Afficher les autres courses
-			if (season.courses && season.courses.length > 0) {
-				var hasInternational = season.courses.some(function(c) {
-					var comp = (c.competition || '').toLowerCase();
-					return comp.indexOf('monde') !== -1 || comp.indexOf('world') !== -1;
-				});
-				var autresLabel = hasInternational ? 'Épreuves nationales et internationales' : 'Épreuves nationales';
-				var cols = detectColumns(season.courses, true);
-
-				html += '<div class="competition-block autres-courses">';
-				html += '<div class="classement-header autres-header">';
-				html += '<span class="classement-competition">' + autresLabel + '</span>';
-				html += '</div>';
-				html += '<div class="table-container"><table><thead><tr>';
-				cols.forEach(function(col) {
-					html += '<th>' + (columnLabels[col] || col) + '</th>';
-				});
-				html += '</tr></thead><tbody>';
-				html += renderCourseRows(season.courses, cols);
-				html += '</tbody></table></div>';
-				html += '</div>';
 			}
 
 			content.innerHTML = html;
@@ -242,26 +313,16 @@
 		var byYear = {};
 		var years = new Set();
 
-		// Championnats
-		data.championnats.forEach(function(champ) {
-			var year = champ.annee;
-			if (!year && champ.courses && champ.courses.length > 0) {
-				year = getYear(champ.courses[0].dateDebut);
+		// Toutes les compétitions
+		data.competitions.forEach(function(comp) {
+			var year = comp.annee;
+			if (!year && comp.courses && comp.courses.length > 0) {
+				year = getYear(comp.courses[0].dateDebut);
 			}
 			if (year) {
 				years.add(year);
-				if (!byYear[year]) byYear[year] = { championnats: [], courses: [] };
-				byYear[year].championnats.push(champ);
-			}
-		});
-
-		// Courses individuelles
-		data.courses.forEach(function(course) {
-			var year = getYear(course.dateDebut);
-			if (year) {
-				years.add(year);
-				if (!byYear[year]) byYear[year] = { championnats: [], courses: [] };
-				byYear[year].courses.push(course);
+				if (!byYear[year]) byYear[year] = { competitions: [] };
+				byYear[year].competitions.push(comp);
 			}
 		});
 
@@ -270,25 +331,27 @@
 			Object.keys(data.infos).forEach(function(y) {
 				var year = parseInt(y, 10);
 				years.add(year);
-				if (!byYear[year]) byYear[year] = { championnats: [], courses: [], info: data.infos[y] };
+				if (!byYear[year]) byYear[year] = { competitions: [], info: data.infos[y] };
 				else byYear[year].info = data.infos[y];
 			});
 		}
 
-		// Trier les courses par date dans chaque année
+		// Trier les compétitions et leurs courses par date dans chaque année
 		Object.keys(byYear).forEach(function(year) {
-			byYear[year].championnats.forEach(function(champ) {
-				if (champ.courses && champ.courses.length > 1) {
-					champ.courses.sort(function(a, b) {
+			// Trier les compétitions par date de première course
+			byYear[year].competitions.sort(function(a, b) {
+				var dateA = a.courses && a.courses.length > 0 ? a.courses[0].dateDebut : '';
+				var dateB = b.courses && b.courses.length > 0 ? b.courses[0].dateDebut : '';
+				return (dateA || '').localeCompare(dateB || '');
+			});
+			// Trier les courses dans chaque compétition
+			byYear[year].competitions.forEach(function(comp) {
+				if (comp.courses && comp.courses.length > 1) {
+					comp.courses.sort(function(a, b) {
 						return (a.dateDebut || '').localeCompare(b.dateDebut || '');
 					});
 				}
 			});
-			if (byYear[year].courses.length > 1) {
-				byYear[year].courses.sort(function(a, b) {
-					return (a.dateDebut || '').localeCompare(b.dateDebut || '');
-				});
-			}
 		});
 
 		return { byYear: byYear, years: Array.from(years).sort(function(a, b) { return b - a; }) };
@@ -299,21 +362,15 @@
 		var competitions = new Set();
 		var categories = new Set();
 
-		data.championnats.forEach(function(champ) {
-			competitions.add(champ.nom);
-			categories.add(champ.categorie);
-			if (champ.courses) {
-				champ.courses.forEach(function(c) {
+		data.competitions.forEach(function(comp) {
+			competitions.add(comp.nom);
+			categories.add(comp.categorie);
+			if (comp.courses) {
+				comp.courses.forEach(function(c) {
 					if (c.circuit) circuits.add(c.circuit);
 					if (c.categorie) categories.add(c.categorie);
 				});
 			}
-		});
-
-		data.courses.forEach(function(c) {
-			if (c.circuit) circuits.add(c.circuit);
-			if (c.competition) competitions.add(c.competition);
-			if (c.categorie) categories.add(c.categorie);
 		});
 
 		// Années
@@ -360,29 +417,26 @@
 		var circuits = new Set();
 		var yearsWithCourses = new Set();
 
-		data.championnats.forEach(function(champ) {
-			if (champ.courses) {
-				champ.courses.forEach(function(c) {
+		data.competitions.forEach(function(comp) {
+			// Compter les podiums des résultats de championnat
+			if (isPodium(comp.resultat)) {
+				totalPodiums++;
+				if (isVictoire(comp.resultat)) totalVictoires++;
+			}
+			if (comp.courses) {
+				comp.courses.forEach(function(c) {
 					totalCourses++;
 					if (c.circuit) circuits.add(c.circuit);
 					var year = getYear(c.dateDebut);
 					if (year) yearsWithCourses.add(year);
-					if (c.podium) {
+					if (isPodium(c.finale)) {
 						totalPodiums++;
-						if (isVictoire(c.finale || c.resultat)) totalVictoires++;
+						if (isVictoire(c.finale)) totalVictoires++;
+					} else if (isPodium(c.finaleB)) {
+						totalPodiums++;
+						if (isVictoire(c.finaleB)) totalVictoires++;
 					}
 				});
-			}
-		});
-
-		data.courses.forEach(function(c) {
-			totalCourses++;
-			if (c.circuit) circuits.add(c.circuit);
-			var year = getYear(c.dateDebut);
-			if (year) yearsWithCourses.add(year);
-			if (c.podium) {
-				totalPodiums++;
-				if (isVictoire(c.finale || c.resultat)) totalVictoires++;
 			}
 		});
 
@@ -398,7 +452,7 @@
 	function matchesCourse(course, filters) {
 		if (filters.circuit && course.circuit !== filters.circuit) return false;
 		if (filters.categorie && course.categorie !== filters.categorie) return false;
-		if (filters.podium && !course.podium) return false;
+		if (filters.podium && !isPodium(course.finale)) return false;
 		return true;
 	}
 
@@ -432,53 +486,41 @@
 			var filteredSeason = {
 				annee: year,
 				info: seasonData.info,
-				championnats: [],
-				courses: []
+				competitions: []
 			};
 
-			// Filtrer les championnats
-			seasonData.championnats.forEach(function(champ) {
-				var matchesComp = matchesCompetition(champ.nom, competitionVal);
-				var matchesCat = !categorieVal || champ.categorie === categorieVal;
-				var matchesPod = !podiumVal || champ.podium;
+			// Filtrer les compétitions
+			seasonData.competitions.forEach(function(comp) {
+				var matchesComp = matchesCompetition(comp.nom, competitionVal);
+				var matchesCat = !categorieVal || comp.categorie === categorieVal;
+				var matchesPod = !podiumVal || isPodium(comp.resultat);
 
 				if (matchesComp && matchesCat) {
-					var filteredChamp = {
-						nom: champ.nom,
-						categorie: champ.categorie,
-						resultat: champ.resultat,
-						podium: champ.podium,
+					var filteredComp = {
+						nom: comp.nom,
+						categorie: comp.categorie,
+						resultat: comp.resultat,
 						courses: []
 					};
 
-					if (champ.courses) {
-						champ.courses.forEach(function(course) {
+					if (comp.courses) {
+						comp.courses.forEach(function(course) {
 							if (matchesCourse(course, filters)) {
-								filteredChamp.courses.push(course);
+								filteredComp.courses.push(course);
 								totalRaces++;
-								if (course.podium) totalPodiums++;
+								if (isPodium(course.finale)) totalPodiums++;
 							}
 						});
 					}
 
-					if (filteredChamp.courses.length > 0 || (matchesPod && !circuitVal)) {
-						filteredSeason.championnats.push(filteredChamp);
+					if (filteredComp.courses.length > 0 || (matchesPod && !circuitVal)) {
+						filteredSeason.competitions.push(filteredComp);
 					}
 				}
 			});
 
-			// Filtrer les courses hors championnat
-			seasonData.courses.forEach(function(course) {
-				var matchesComp = matchesCompetition(course.competition, competitionVal);
-				if (matchesComp && matchesCourse(course, filters)) {
-					filteredSeason.courses.push(course);
-					totalRaces++;
-					if (course.podium) totalPodiums++;
-				}
-			});
-
 			var hasActiveFilters = circuitVal || competitionVal || categorieVal || podiumVal;
-			var hasContent = filteredSeason.championnats.length > 0 || filteredSeason.courses.length > 0;
+			var hasContent = filteredSeason.competitions.length > 0;
 			if (hasContent || (filteredSeason.info && !hasActiveFilters)) {
 				filteredSeasons.push(filteredSeason);
 			}

@@ -1,249 +1,442 @@
 {
-  "championnats": [
+  "competitions": [
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
-      "resultat": "15ème",
+      "resultat": "15",
       "courses": [
-        {"dateDebut": "2024-03-16", "dateFin": "2024-03-17", "circuit": "Lohéac", "manche": "1/4", "categorie": "KZ2 Master", "finale": "5ème"},
-        {"dateDebut": "2024-04-06", "dateFin": "2024-04-07", "circuit": "Le Mans", "manche": "2/4", "categorie": "KZ2", "finale": "6ème"},
-        {"dateDebut": "2024-04-27", "dateFin": "2024-04-28", "circuit": "Pléssé", "manche": "3/4", "categorie": "KZ2", "cumul": "DNS", "finale": "DNS"},
-        {"dateDebut": "2024-05-25", "dateFin": "2024-05-26", "circuit": "Ancenis", "manche": "4/4", "categorie": "KZ2", "cumul": "8ème", "finale": "4ème"}
+        {"dateDebut": "2024-03-16", "dateFin": "2024-03-17", "circuit": "Lohéac", "manche": "1/4", "categorie": "KZ2 Master", "chrono": "5", "cumul": "", "prefinale": "", "finale": "5"},
+        {"dateDebut": "2024-04-06", "dateFin": "2024-04-07", "circuit": "Le Mans", "manche": "2/4", "categorie": "KZ2", "chrono": "14", "cumul": "", "prefinale": "", "finale": "6"},
+        {"dateDebut": "2024-05-25", "dateFin": "2024-05-26", "circuit": "Ancenis", "manche": "4/4", "categorie": "KZ2", "chrono": "4", "cumul": "8", "prefinale": "", "finale": "4"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ2 Master",
+      "courses": [
+        {"dateDebut": "2024-09-20", "dateFin": "2024-09-22", "circuit": "Laval", "chrono": "9" ,"cumul": "6", "finale": "7"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
-      "resultat": "3ème",
-      "podium": true,
+      "resultat": "3",
       "courses": [
-        {"dateDebut": "2022-03-12", "dateFin": "2022-03-13", "circuit": "Laval", "manche": "1/4", "prefinale": "2ème", "finale": "1er", "podium": true},
-        {"dateDebut": "2022-04-02", "dateFin": "2022-04-03", "circuit": "Lohéac", "manche": "2/4", "prefinale": "5ème", "finale": "4ème"},
-        {"dateDebut": "2022-04-23", "dateFin": "2022-04-24", "circuit": "Ancenis", "manche": "3/4", "prefinale": "3ème", "finale": "7ème - DNF"},
-        {"dateDebut": "2022-05-14", "dateFin": "2022-05-15", "circuit": "Pléssé", "manche": "4/4", "prefinale": "3ème", "finale": "2ème", "podium": true}
+        {"dateDebut": "2022-03-12", "dateFin": "2022-03-13", "circuit": "Laval", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "1"},
+        {"dateDebut": "2022-04-02", "dateFin": "2022-04-03", "circuit": "Lohéac", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "5", "finale": "4"},
+        {"dateDebut": "2022-04-23", "dateFin": "2022-04-24", "circuit": "Ancenis", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "7", "dnf": true},
+        {"dateDebut": "2022-05-14", "dateFin": "2022-05-15", "circuit": "Pléssé", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "2"}
+      ]
+    },
+    {
+      "nom": "Coupe du monde",
+      "categorie": "KZ2 Master",
+      "courses": [
+        {"dateDebut": "2022-09-01", "dateFin": "2022-09-04", "circuit": "Le Mans", "chrono": "20", "cumul": "12", "finale": "17"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
-      "resultat": "3ème",
-      "podium": true,
+      "resultat": "3",
       "courses": [
-        {"dateDebut": "2020-03-07", "dateFin": "2020-03-08", "circuit": "Laval", "manche": "1/3", "prefinale": "2ème", "finale": "7ème"},
-        {"dateDebut": "2020-08-29", "dateFin": "2020-08-30", "circuit": "Ancenis", "manche": "2/3", "prefinale": "3ème", "finale": "3ème", "podium": true},
-        {"dateDebut": "2020-09-26", "dateFin": "2020-09-27", "circuit": "Lohéac", "manche": "3/3", "prefinale": "2ème", "finale": "2ème", "podium": true}
+        {"dateDebut": "2020-03-07", "dateFin": "2020-03-08", "circuit": "Laval", "manche": "1/3", "chrono": "", "cumul": "", "prefinale": "2", "finale": "7"},
+        {"dateDebut": "2020-08-29", "dateFin": "2020-08-30", "circuit": "Ancenis", "manche": "2/3", "chrono": "", "cumul": "", "prefinale": "3", "finale": "3"},
+        {"dateDebut": "2020-09-26", "dateFin": "2020-09-27", "circuit": "Lohéac", "manche": "3/3", "chrono": "", "cumul": "", "prefinale": "2", "finale": "2"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "resultat": "15",
+      "categorie": "KZ2 Master",
+      "courses": [
+        {"dateDebut": "2020-10-08", "dateFin": "2020-10-11", "circuit": "Laval", "chrono": "17", "cumul": "15", "finale 1": "13", "finale 2": "14", "finale 3": "19"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
-      "resultat": "5ème",
+      "resultat": "5",
       "courses": [
-        {"dateDebut": "2019-03-09", "dateFin": "2019-03-10", "circuit": "Laval", "manche": "1/4", "prefinale": "2ème", "finale": "12ème"},
-        {"dateDebut": "2019-03-23", "dateFin": "2019-03-24", "circuit": "Le Mans", "manche": "2/4", "prefinale": "11ème", "finale": "6ème"},
-        {"dateDebut": "2019-04-27", "dateFin": "2019-04-28", "circuit": "Lohéac", "manche": "3/4", "prefinale": "3ème", "finale": "4ème"},
-        {"dateDebut": "2019-05-18", "dateFin": "2019-05-19", "circuit": "Ancenis", "manche": "4/4", "prefinale": "5ème", "finale": "3ème", "podium": true}
+        {"dateDebut": "2019-03-09", "dateFin": "2019-03-10", "circuit": "Laval", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "12"},
+        {"dateDebut": "2019-03-23", "dateFin": "2019-03-24", "circuit": "Le Mans", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "11", "finale": "6"},
+        {"dateDebut": "2019-04-27", "dateFin": "2019-04-28", "circuit": "Lohéac", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "4"},
+        {"dateDebut": "2019-05-18", "dateFin": "2019-05-19", "circuit": "Ancenis", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "5", "finale": "3"}
+      ]
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ2 Master",
+      "courses": [
+        {"dateDebut": "2019-05-26", "dateFin": "2019-05-28", "circuit": "Le Mans", "chrono": "19", "cumul": "19", "prefinale": "12", "finale": "11"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
-      "resultat": "Vice-champion",
-      "podium": true,
+      "resultat": "2",
       "courses": [
-        {"dateDebut": "2018-03-17", "dateFin": "2018-03-18", "circuit": "Le Mans", "manche": "1/4", "prefinale": "3ème", "finale": "2ème", "podium": true},
-        {"dateDebut": "2018-04-07", "dateFin": "2018-04-08", "circuit": "Lohéac", "manche": "2/4", "prefinale": "2ème", "finale": "2ème", "podium": true},
-        {"dateDebut": "2018-04-28", "dateFin": "2018-04-29", "circuit": "Ancenis", "manche": "3/4", "prefinale": "25ème", "finale": "7ème"},
-        {"dateDebut": "2018-06-02", "dateFin": "2018-06-03", "circuit": "Laval", "manche": "4/4", "prefinale": "24ème", "finale": "4ème"}
+        {"dateDebut": "2018-03-17", "dateFin": "2018-03-18", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "2"},
+        {"dateDebut": "2018-04-07", "dateFin": "2018-04-08", "circuit": "Lohéac", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "2"},
+        {"dateDebut": "2018-04-28", "dateFin": "2018-04-29", "circuit": "Ancenis", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "25", "finale": "7"},
+        {"dateDebut": "2018-06-02", "dateFin": "2018-06-03", "circuit": "Laval", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "24", "finale": "4"}
+      ]
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ2 Master",
+      "courses": [
+        {"dateDebut": "2018-05-26", "dateFin": "2018-05-28", "circuit": "Anneville", "chrono": "7", "cumul": "9", "prefinale": "7", "finale": "12"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ2 Master",
+      "resultat": "5",
+      "courses": [
+        {"dateDebut": "2018-10-04", "dateFin": "2018-10-07", "circuit": "Varennes/Allier", "chrono": "12", "cumul": "22", "finale 1": "11", "finale 2": "4", "finale 3": "7"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
-      "resultat": "Vice-champion",
-      "podium": true,
+      "resultat": "2",
       "courses": [
-        {"dateDebut": "2017-03-18", "dateFin": "2017-03-19", "circuit": "Le Mans", "manche": "1/4", "prefinale": "1er", "finale": "2ème", "podium": true},
-        {"dateDebut": "2017-04-08", "dateFin": "2017-04-09", "circuit": "Ancenis", "manche": "2/4", "prefinale": "2ème", "finale": "2ème", "podium": true},
-        {"dateDebut": "2017-04-29", "dateFin": "2017-04-30", "circuit": "Lohéac", "manche": "3/4", "prefinale": "7ème", "finale": "annulée"},
-        {"dateDebut": "2017-06-03", "dateFin": "2017-06-04", "circuit": "Laval", "manche": "4/4", "prefinale": "20ème", "finale": "6ème"}
+        {"dateDebut": "2017-03-18", "dateFin": "2017-03-19", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "1", "finale": "2"},
+        {"dateDebut": "2017-04-08", "dateFin": "2017-04-09", "circuit": "Ancenis", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "2"},
+        {"dateDebut": "2017-04-29", "dateFin": "2017-04-30", "circuit": "Lohéac", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "7", "finale": "", "annulee": true},
+        {"dateDebut": "2017-06-03", "dateFin": "2017-06-04", "circuit": "Laval", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "20", "finale": "6"}
+      ]
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2017-05-26", "dateFin": "2017-05-28", "circuit": "Le Mans", "chrono": "27", "cumul": "23", "prefinale": "21", "finale": "15"}
+      ]
+    },
+    {
+      "nom": "National Series Karting",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2017-09-15", "dateFin": "2017-09-17", "circuit": "Val d'Argenton", "chrono": "16", "cumul": "13", "prefinale": "9", "finale": "18"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2017-10-05", "dateFin": "2017-10-08", "circuit": "Val d'Argenton", "chrono": "20", "cumul": "48", "finaleB": "3"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
-      "resultat": "Champion",
-      "podium": true,
+      "resultat": "1",
       "courses": [
-        {"dateDebut": "2016-03-19", "dateFin": "2016-03-20", "circuit": "Le Mans", "manche": "1/4", "prefinale": "vainqueur", "finale": "vainqueur", "podium": true},
-        {"dateDebut": "2016-04-02", "dateFin": "2016-04-03", "circuit": "Laval", "manche": "2/4", "prefinale": "2ème", "finale": "2ème", "podium": true},
-        {"dateDebut": "2016-04-16", "dateFin": "2016-04-17", "circuit": "Lohéac", "manche": "3/4", "prefinale": "3ème", "finale": "9ème"},
-        {"dateDebut": "2016-04-30", "dateFin": "2016-05-01", "circuit": "Ancenis", "manche": "4/4", "prefinale": "2ème", "finale": "3ème", "podium": true}
+        {"dateDebut": "2016-03-19", "dateFin": "2016-03-20", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "1", "finale": "1"},
+        {"dateDebut": "2016-04-02", "dateFin": "2016-04-03", "circuit": "Laval", "manche": "2/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "2"},
+        {"dateDebut": "2016-04-16", "dateFin": "2016-04-17", "circuit": "Lohéac", "manche": "3/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "9"},
+        {"dateDebut": "2016-04-30", "dateFin": "2016-05-01", "circuit": "Ancenis", "manche": "4/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "3"}
+      ]
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2016-05-06", "dateFin": "2016-05-08", "circuit": "Anneville","chrono": "11", "cumul": "6", "prefinale": "9", "finale": "34", "dnf": true}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2016-07-22", "dateFin": "2016-07-24", "circuit": "Varennes/Allier", "chrono": "", "cumul": "", "prefinale": "18", "finale": "20"}
+      ]
+    },
+    {
+      "nom": "Trophée de Sologne",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2016-09-03", "dateFin": "2016-09-04", "circuit": "Salbris", "manche": "3/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "8"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2016-09-23", "dateFin": "2016-09-25", "circuit": "Salbris", "chrono": "67", "cumul": "72", "finaleB": "12"}
       ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
-      "resultat": "6ème",
-      "annee": 2015,
-      "courses": []
+      "resultat": "6",
+      "annee": 2015
+    },
+    {
+      "nom": "Stars of Karting",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2015-02-28", "dateFin": "2015-03-01", "circuit": "Laval", "manche": "1/3", "chrono": "13", "cumul": "11", "prefinale": "14", "finale": "21"},
+        {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "circuit": "Varennes/Allier", "manche": "2/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "29"}
+      ]
+    },
+    {
+      "nom": "Championnat du Monde",
+      "categorie": "KZ2",
+      "resultat": "80",
+      "courses": [
+        {"dateDebut": "2015-09-10", "dateFin": "2015-09-13", "circuit": "Le Mans", "chrono": "74", "cumul": "80"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ2",
+      "resultat": "20",
+      "courses": [
+        {"dateDebut": "2015-10-02", "dateFin": "2015-10-04", "circuit": "Varennes/Allier", "chrono": "22", "cumul": "23", "finale 1": "22", "finale 2": "20", "finale 3": "18"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
-      "resultat": "7ème",
-      "annee": 2014,
-      "courses": []
+      "resultat": "7",
+      "annee": 2014
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2014-05-03", "dateFin": "2014-05-04", "circuit": "Le Mans", "chrono": "39", "cumul": "51", "finaleB": "14"}
+      ]
+    },
+    {
+      "nom": "Stars of Karting",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "circuit": "Angerville", "manche": "1/3", "chrono": "", "cumul": "", "prefinale": "11", "finale": "19"},
+        {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "manche": "2/3", "chrono": "", "cumul": "", "finaleB": "3"},
+        {"dateDebut": "2014-11-01", "dateFin": "2014-11-02", "circuit": "Laval", "manche": "3/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2014-10-03", "dateFin": "2014-10-06", "circuit": "Pers", "chrono": "41", "cumul": "36", "finaleB": "5"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
-      "resultat": "5ème",
+      "resultat": "5",
       "annee": 2013,
-      "courses": []
+      "courses": [
+        {"dateDebut": "2013-03-23", "dateFin": "2013-03-24", "circuit": "Lohéac", "manche": "", "chrono": "5", "cumul": "", "prefinale": "3", "finale": "3"},
+        {"dateDebut": "2013-04-13", "dateFin": "2017-04-14", "circuit": "Le Mans", "manche": "", "chrono": "5", "cumul": "", "prefinale": "12", "finale": "12"}
+      ]
+    },
+    {
+      "nom": "Championnat de France long circuit",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "circuit": "Croix en Ternois", "chrono": "8", "cumul": "8", "prefinale": "8", "finale": "9"}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "KZ2",
+      "courses": [
+        {"dateDebut": "2013-07-19", "dateFin": "2013-07-21", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2013-10-03", "dateFin": "2013-10-06", "circuit": "Salbris", "chrono": "38", "cumul": "30", "prefinale": "27", "finale": "25"}
+      ]
+    },
+    {
+      "nom": "Trophée de Bretagne",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2013-10-19", "dateFin": "2013-10-20", "circuit": "Lohéac", "chrono": "", "cumul": "", "prefinale": "", "finale": "1"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
-      "resultat": "3ème",
-      "podium": true,
-      "annee": 2009,
-      "courses": []
+      "resultat": "3",
+      "annee": 2009
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
-      "resultat": "Vice-champion",
-      "podium": true,
-      "annee": 2008,
-      "courses": []
+      "resultat": "2",
+      "annee": 2008
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "KZ125",
+      "courses": [
+        {"dateDebut": "2008-09-26", "dateFin": "2008-09-28", "circuit": "Ostricourt", "chrono": "46", "cumul": "", "finaleB": "3"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "3ème",
-      "podium": true,
-      "annee": 2007,
-      "courses": []
+      "resultat": "3",
+      "annee": 2007
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2007-09-28", "dateFin": "2007-09-30", "circuit": "Lavelanet", "chrono": "35", "cumul": "25", "prefinale": "20", "finale": "24"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "3ème",
-      "podium": true,
-      "annee": 2006,
-      "courses": []
+      "resultat": "3",
+      "annee": 2006
+    },
+    {
+      "nom": "Coupe de France long circuit",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2006-01-01", "circuit": "Carole", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+      ]
+    },
+    {
+      "nom": "Championnat de France",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2006-09-22", "dateFin": "2006-09-24", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "5", "finale": "20"}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2006-01-03", "circuit": "Salbris", "chrono": "", "cumul": "", "prefinale": "21", "finale": "16"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "7ème",
-      "annee": 2005,
-      "courses": []
+      "resultat": "7",
+      "annee": 2005
+    },
+    {
+      "nom": "Coupe de France long circuit",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2005-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"},
+        {"dateDebut": "2005-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "finaleB": "2"}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2005-01-03", "circuit": "Lavelanet", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+      ]
+    },
+    {
+      "nom": "Grand Prix FFSA",
+      "categorie": "ICC",
+      "courses": [
+        {"dateDebut": "2005-01-04", "circuit": "Essay", "chrono": "", "cumul": "", "prefinale": "", "finale": "15"}
+      ]
     },
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
-      "resultat": "Vice-champion",
-      "podium": true,
-      "annee": 2004,
-      "courses": []
+      "resultat": "2",
+      "annee": 2004
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "3ème",
-      "podium": true,
-      "annee": 2004,
-      "courses": []
+      "resultat": "3",
+      "annee": 2004
+    },
+    {
+      "nom": "Coupe de France long circuit",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2004-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "14"},
+        {"dateDebut": "2004-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "prefinale": "", "finale": "6"}
+      ]
+    },
+    {
+      "nom": "Trophée Kart Mag",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2004-01-03", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
+      ]
+    },
+    {
+      "nom": "Coupe de France",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2004-01-04", "circuit": "Septfontaine", "chrono": "", "cumul": "", "prefinale": "", "finale": "34"}
+      ]
     },
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
-      "resultat": "Champion",
-      "podium": true,
-      "annee": 2003,
-      "courses": []
+      "resultat": "1",
+      "annee": 2003
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "10ème",
-      "annee": 2003,
-      "courses": []
+      "resultat": "10",
+      "annee": 2003
+    },
+    {
+      "nom": "Coupe de France long circuit",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2003-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "finaleB": "1"}
+      ]
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
-      "resultat": "8ème",
-      "annee": 2002,
-      "courses": []
+      "resultat": "8",
+      "annee": 2002
     },
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
-      "resultat": "3ème",
-      "podium": true,
-      "annee": 2002,
-      "courses": []
+      "resultat": "3",
+      "annee": 2002
+    },
+    {
+      "nom": "Trophée des Nations",
+      "categorie": "N125",
+      "courses": [
+        {"dateDebut": "2002-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+      ]
     },
     {
       "nom": "Trophée de Bretagne",
       "categorie": "Cadet",
-      "resultat": "5ème",
-      "annee": 2000,
-      "courses": []
-    },
-    {
-      "nom": "Star of Karting",
-      "categorie": "KZ2",
-      "resultat": "",
-      "annee": 2014,
-      "courses": [ 
-    {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "competition": "Stars of Karting", "circuit": "Angerville", "manche": "1/3", "categorie": "KZ125", "resultat": "19ème"},
-    {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "competition": "Stars of Karting", "circuit": "Pers", "manche": "2/3", "categorie": "KZ125", "resultat": "3ème coupe CRK", "podium": true},
-    {"dateDebut": "2014-11-01", "dateFin": "2014-11-02", "competition": "Stars of Karting", "circuit": "Laval", "manche": "3/3", "categorie": "KZ125", "resultat": "11ème"}
-   ]
+      "resultat": "5",
+      "annee": 2000
     }
-  ],
-  "courses": [
-    {"dateDebut": "2024-09-20", "dateFin": "2024-09-22", "competition": "Championnat de France", "circuit": "Laval", "categorie": "KZ2 Master", "cumul": "6ème", "finale": "7ème"},
-    {"dateDebut": "2022-09-01", "dateFin": "2022-09-04", "competition": "Coupe du monde", "circuit": "Le Mans", "categorie": "KZ2 Master", "prefinale": "12ème", "finale": "17ème"},
-    {"dateDebut": "2020-10-08", "dateFin": "2020-10-11", "competition": "Championnat de France", "circuit": "Laval", "categorie": "KZ2 Master", "finale": "15ème"},
-    {"dateDebut": "2019-05-26", "dateFin": "2019-05-28", "competition": "Coupe de France", "circuit": "Le Mans", "categorie": "KZ2 Master", "prefinale": "12ème", "finale": "11ème"},
-    {"dateDebut": "2018-05-26", "dateFin": "2018-05-28", "competition": "Coupe de France", "circuit": "Anneville", "categorie": "KZ2 Master", "prefinale": "7ème", "finale": "12ème"},
-    {"dateDebut": "2018-10-04", "dateFin": "2018-10-07", "competition": "Championnat de France", "circuit": "Varennes/Allier", "categorie": "KZ2 Master", "finale": "5ème"},
-    {"dateDebut": "2017-05-26", "dateFin": "2017-05-28", "competition": "Coupe de France", "circuit": "Le Mans", "categorie": "KZ2", "prefinale": "19ème", "finale": "15ème"},
-    {"dateDebut": "2017-09-15", "dateFin": "2017-09-17", "competition": "National Series Karting", "circuit": "Val d'Argenton", "categorie": "KZ2", "prefinale": "9ème", "finale": "18ème"},
-    {"dateDebut": "2017-10-05", "dateFin": "2017-10-08", "competition": "Championnat de France", "circuit": "Val d'Argenton", "categorie": "KZ2", "finale": "3ème Coupe de la ville", "podium": true},
-    {"dateDebut": "2016-05-06", "dateFin": "2016-05-08", "competition": "Coupe de France", "circuit": "Anneville", "categorie": "KZ2", "prefinale": "9ème", "finale": "34ème"},
-    {"dateDebut": "2016-07-22", "dateFin": "2016-07-24", "competition": "Trophée Kart Mag", "circuit": "Varennes/Allier", "categorie": "KZ2", "prefinale": "18ème", "finale": "20ème"},
-    {"dateDebut": "2016-09-03", "dateFin": "2016-09-04", "competition": "Trophée de Sologne", "circuit": "Salbris", "manche": "3/3", "categorie": "KZ2", "finale": "8ème"},
-    {"dateDebut": "2016-09-23", "dateFin": "2016-09-25", "competition": "Championnat de France", "circuit": "Salbris", "categorie": "KZ2", "finale": "12ème Coupe de la CRK"},
-    {"dateDebut": "2015-02-28", "dateFin": "2015-03-01", "competition": "Stars of Karting", "circuit": "Laval", "manche": "1/3", "categorie": "KZ2", "resultat": "21ème"},
-    {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "competition": "Stars of Karting", "circuit": "Varennes/Allier", "manche": "2/3", "categorie": "KZ2", "resultat": "29ème"},
-    {"dateDebut": "2015-09-10", "dateFin": "2015-09-13", "competition": "Championnat du Monde", "circuit": "Le Mans", "categorie": "KZ2", "resultat": "80ème"},
-    {"dateDebut": "2015-10-02", "dateFin": "2015-10-04", "competition": "Championnat de France", "circuit": "Varennes/Allier", "categorie": "KZ2", "resultat": "20ème"},
-    {"dateDebut": "2014-10-03", "dateFin": "2014-10-06", "competition": "Championnat de France", "circuit": "Pers", "categorie": "KZ125", "resultat": "4ème coupe CRK"},
-    {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "competition": "Championnat de France long circuit", "circuit": "Croix en Ternois", "categorie": "KZ125", "resultat": "9ème"},
-    {"dateDebut": "2013-07-19", "dateFin": "2013-07-21", "competition": "Trophée Kart Mag", "circuit": "Laval", "categorie": "KZ2", "resultat": "5ème"},
-    {"dateDebut": "2013-10-03", "dateFin": "2013-10-06", "competition": "Championnat de France", "circuit": "Salbris", "categorie": "KZ125", "resultat": "25ème"},
-    {"dateDebut": "2013-10-19", "dateFin": "2013-10-20", "competition": "Trophée de Bretagne", "circuit": "Lohéac", "categorie": "KZ125", "resultat": "vainqueur", "podium": true},
-    {"dateDebut": "2008-09-03", "dateFin": "2008-09-06", "competition": "Coupe de France", "circuit": "Ostricourt", "categorie": "KZ125", "resultat": "3ème coupe CRK", "podium": true},
-    {"dateDebut": "2007-01-01", "competition": "Coupe de France", "circuit": "Lavelanet", "categorie": "N125", "prefinale": "20ème", "finale": "24ème"},
-    {"dateDebut": "2006-01-01", "competition": "Coupe de France long circuit", "circuit": "Carole", "categorie": "N125", "finale": "11ème"},
-    {"dateDebut": "2006-01-02", "competition": "Championnat de France", "circuit": "Laval", "categorie": "N125", "prefinale": "5ème", "finale": "20ème"},
-    {"dateDebut": "2006-01-03", "competition": "Trophée Kart Mag", "circuit": "Salbris", "categorie": "N125", "prefinale": "21ème", "finale": "16ème"},
-    {"dateDebut": "2005-01-01", "competition": "Coupe de France long circuit", "circuit": "Croix en Ternois", "categorie": "N125", "resultat": "7ème"},
-    {"dateDebut": "2005-01-02", "competition": "Coupe de France long circuit", "circuit": "Carole", "categorie": "N125", "resultat": "2ème coupe de la ville", "podium": true},
-    {"dateDebut": "2005-01-03", "competition": "Trophée Kart Mag", "circuit": "Lavelanet", "categorie": "N125", "resultat": "11ème"},
-    {"dateDebut": "2005-01-04", "competition": "Grand Prix FFSA", "circuit": "Essay", "categorie": "ICC", "resultat": "15ème"},
-    {"dateDebut": "2004-01-01", "competition": "Coupe de France long circuit", "circuit": "Croix en Ternois", "categorie": "N125", "resultat": "14ème"},
-    {"dateDebut": "2004-01-02", "competition": "Coupe de France long circuit", "circuit": "Carole", "categorie": "N125", "resultat": "6ème"},
-    {"dateDebut": "2004-01-03", "competition": "Trophée Kart Mag", "circuit": "Laval", "categorie": "N125", "resultat": "5ème"},
-    {"dateDebut": "2004-01-04", "competition": "Coupe de France", "circuit": "Septfontaine", "categorie": "N125", "resultat": "34ème"},
-    {"dateDebut": "2003-01-01", "competition": "Coupe de France long circuit", "circuit": "Croix en Ternois", "categorie": "N125", "resultat": "1er coupe de la ville", "podium": true},
-    {"dateDebut": "2002-01-01", "competition": "Trophée des Nations", "circuit": "Croix en Ternois", "categorie": "N125", "resultat": "11ème"}
   ],
   "infos": {
     "2001": "Première saison en N125, n'ayant pas encore l'âge de rouler en course, ce fut une année d'entraînement."
