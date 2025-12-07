@@ -300,7 +300,7 @@
 				season.competitions.forEach(function(comp) {
 					var hasResultat = comp.resultat && comp.resultat.length > 0;
 					var niveau = comp.niveau || 'regional';
-					var niveauLabel = niveau === 'international' ? 'Mondial' : (niveau === 'national' ? 'National' : 'Régional');
+					var niveauLabel = niveau === 'international' ? 'Mondiale' : (niveau === 'national' ? 'Nationale' : 'Régionale');
 
 					html += '<div class="competition-block">';
 					html += '<div class="classement-header niveau-' + niveau + '">';
