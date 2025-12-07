@@ -3,6 +3,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
+      "niveau": "regional",
       "resultat": "15",
       "courses": [
         {"dateDebut": "2024-03-16", "dateFin": "2024-03-17", "circuit": "Lohéac", "manche": "1/4", "categorie": "KZ2 Master", "chrono": "5", "cumul": "", "prefinale": "", "finale": "5"},
@@ -13,6 +14,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ2 Master",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2024-09-20", "dateFin": "2024-09-22", "circuit": "Laval", "chrono": "9" ,"cumul": "6", "finale": "7"}
       ]
@@ -20,6 +22,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
+      "niveau": "regional",
       "resultat": "3",
       "courses": [
         {"dateDebut": "2022-03-12", "dateFin": "2022-03-13", "circuit": "Laval", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "1"},
@@ -31,6 +34,7 @@
     {
       "nom": "Coupe du monde",
       "categorie": "KZ2 Master",
+      "niveau": "international",
       "courses": [
         {"dateDebut": "2022-09-01", "dateFin": "2022-09-04", "circuit": "Le Mans", "chrono": "20", "cumul": "12", "finale": "17"}
       ]
@@ -38,6 +42,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
+      "niveau": "regional",
       "resultat": "3",
       "courses": [
         {"dateDebut": "2020-03-07", "dateFin": "2020-03-08", "circuit": "Laval", "manche": "1/3", "chrono": "", "cumul": "", "prefinale": "2", "finale": "7"},
@@ -47,8 +52,9 @@
     },
     {
       "nom": "Championnat de France",
-      "resultat": "15",
       "categorie": "KZ2 Master",
+      "niveau": "national",
+      "resultat": "15",
       "courses": [
         {"dateDebut": "2020-10-08", "dateFin": "2020-10-11", "circuit": "Laval", "chrono": "17", "cumul": "15", "finale 1": "13", "finale 2": "14", "finale 3": "19"}
       ]
@@ -56,6 +62,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
+      "niveau": "regional",
       "resultat": "5",
       "courses": [
         {"dateDebut": "2019-03-09", "dateFin": "2019-03-10", "circuit": "Laval", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "2", "finale": "12"},
@@ -67,6 +74,7 @@
     {
       "nom": "Coupe de France",
       "categorie": "KZ2 Master",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2019-05-26", "dateFin": "2019-05-28", "circuit": "Le Mans", "chrono": "19", "cumul": "19", "prefinale": "12", "finale": "11"}
       ]
@@ -74,6 +82,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2 Master",
+      "niveau": "regional",
       "resultat": "2",
       "courses": [
         {"dateDebut": "2018-03-17", "dateFin": "2018-03-18", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "3", "finale": "2"},
@@ -85,6 +94,7 @@
     {
       "nom": "Coupe de France",
       "categorie": "KZ2 Master",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2018-05-26", "dateFin": "2018-05-28", "circuit": "Anneville", "chrono": "7", "cumul": "9", "prefinale": "7", "finale": "12"}
       ]
@@ -92,6 +102,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ2 Master",
+      "niveau": "national",
       "resultat": "5",
       "courses": [
         {"dateDebut": "2018-10-04", "dateFin": "2018-10-07", "circuit": "Varennes/Allier", "chrono": "12", "cumul": "22", "finale 1": "11", "finale 2": "4", "finale 3": "7"}
@@ -100,6 +111,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
+      "niveau": "regional",
       "resultat": "2",
       "courses": [
         {"dateDebut": "2017-03-18", "dateFin": "2017-03-19", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "1", "finale": "2"},
@@ -111,6 +123,7 @@
     {
       "nom": "Coupe de France",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2017-05-26", "dateFin": "2017-05-28", "circuit": "Le Mans", "chrono": "27", "cumul": "23", "prefinale": "21", "finale": "15"}
       ]
@@ -118,6 +131,7 @@
     {
       "nom": "National Series Karting",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2017-09-15", "dateFin": "2017-09-17", "circuit": "Val d'Argenton", "chrono": "16", "cumul": "13", "prefinale": "9", "finale": "18"}
       ]
@@ -125,6 +139,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2017-10-05", "dateFin": "2017-10-08", "circuit": "Val d'Argenton", "chrono": "20", "cumul": "48", "finaleB": "3"}
       ]
@@ -132,6 +147,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
+      "niveau": "regional",
       "resultat": "1",
       "courses": [
         {"dateDebut": "2016-03-19", "dateFin": "2016-03-20", "circuit": "Le Mans", "manche": "1/4", "chrono": "", "cumul": "", "prefinale": "1", "finale": "1"},
@@ -143,6 +159,7 @@
     {
       "nom": "Coupe de France",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2016-05-06", "dateFin": "2016-05-08", "circuit": "Anneville","chrono": "11", "cumul": "6", "prefinale": "9", "finale": "34", "dnf": true}
       ]
@@ -150,6 +167,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2016-07-22", "dateFin": "2016-07-24", "circuit": "Varennes/Allier", "chrono": "", "cumul": "", "prefinale": "18", "finale": "20"}
       ]
@@ -157,6 +175,7 @@
     {
       "nom": "Trophée de Sologne",
       "categorie": "KZ2",
+      "niveau": "regional",
       "courses": [
         {"dateDebut": "2016-09-03", "dateFin": "2016-09-04", "circuit": "Salbris", "manche": "3/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "8"}
       ]
@@ -164,6 +183,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2016-09-23", "dateFin": "2016-09-25", "circuit": "Salbris", "chrono": "67", "cumul": "72", "finaleB": "12"}
       ]
@@ -171,12 +191,14 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ2",
+      "niveau": "regional",
       "resultat": "6",
       "annee": 2015
     },
     {
       "nom": "Stars of Karting",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2015-02-28", "dateFin": "2015-03-01", "circuit": "Laval", "manche": "1/3", "chrono": "13", "cumul": "11", "prefinale": "14", "finale": "21"},
         {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "circuit": "Varennes/Allier", "manche": "2/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "29"}
@@ -185,6 +207,7 @@
     {
       "nom": "Championnat du Monde",
       "categorie": "KZ2",
+      "niveau": "international",
       "resultat": "80",
       "courses": [
         {"dateDebut": "2015-09-10", "dateFin": "2015-09-13", "circuit": "Le Mans", "chrono": "74", "cumul": "80"}
@@ -193,6 +216,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ2",
+      "niveau": "national",
       "resultat": "20",
       "courses": [
         {"dateDebut": "2015-10-02", "dateFin": "2015-10-04", "circuit": "Varennes/Allier", "chrono": "22", "cumul": "23", "finale 1": "22", "finale 2": "20", "finale 3": "18"}
@@ -201,12 +225,14 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
+      "niveau": "regional",
       "resultat": "7",
       "annee": 2014
     },
     {
       "nom": "Coupe de France",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2014-05-03", "dateFin": "2014-05-04", "circuit": "Le Mans", "chrono": "39", "cumul": "51", "finaleB": "14"}
       ]
@@ -214,6 +240,7 @@
     {
       "nom": "Stars of Karting",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "circuit": "Angerville", "manche": "1/3", "chrono": "", "cumul": "", "prefinale": "11", "finale": "19"},
         {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "manche": "2/3", "chrono": "", "cumul": "", "finaleB": "3"},
@@ -223,6 +250,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"}
       ]
@@ -230,6 +258,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2014-10-03", "dateFin": "2014-10-06", "circuit": "Pers", "chrono": "41", "cumul": "36", "finaleB": "5"}
       ]
@@ -237,6 +266,7 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
+      "niveau": "regional",
       "resultat": "5",
       "annee": 2013,
       "courses": [
@@ -247,6 +277,7 @@
     {
       "nom": "Championnat de France long circuit",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2013-07-05", "dateFin": "2013-07-07", "circuit": "Croix en Ternois", "chrono": "8", "cumul": "8", "prefinale": "8", "finale": "9"}
       ]
@@ -254,6 +285,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "KZ2",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2013-07-19", "dateFin": "2013-07-21", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
       ]
@@ -261,6 +293,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2013-10-03", "dateFin": "2013-10-06", "circuit": "Salbris", "chrono": "38", "cumul": "30", "prefinale": "27", "finale": "25"}
       ]
@@ -268,6 +301,7 @@
     {
       "nom": "Trophée de Bretagne",
       "categorie": "KZ125",
+      "niveau": "regional",
       "courses": [
         {"dateDebut": "2013-10-19", "dateFin": "2013-10-20", "circuit": "Lohéac", "chrono": "", "cumul": "", "prefinale": "", "finale": "1"}
       ]
@@ -275,18 +309,21 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
+      "niveau": "regional",
       "resultat": "3",
       "annee": 2009
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "KZ125",
+      "niveau": "regional",
       "resultat": "2",
       "annee": 2008
     },
     {
       "nom": "Coupe de France",
       "categorie": "KZ125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2008-09-26", "dateFin": "2008-09-28", "circuit": "Ostricourt", "chrono": "46", "cumul": "", "finaleB": "3"}
       ]
@@ -294,12 +331,14 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "3",
       "annee": 2007
     },
     {
       "nom": "Coupe de France",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2007-09-28", "dateFin": "2007-09-30", "circuit": "Lavelanet", "chrono": "35", "cumul": "25", "prefinale": "20", "finale": "24"}
       ]
@@ -307,12 +346,14 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "3",
       "annee": 2006
     },
     {
       "nom": "Coupe de France long circuit",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2006-01-01", "circuit": "Carole", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
@@ -320,6 +361,7 @@
     {
       "nom": "Championnat de France",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2006-09-22", "dateFin": "2006-09-24", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "5", "finale": "20"}
       ]
@@ -327,6 +369,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2006-01-03", "circuit": "Salbris", "chrono": "", "cumul": "", "prefinale": "21", "finale": "16"}
       ]
@@ -334,12 +377,14 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "7",
       "annee": 2005
     },
     {
       "nom": "Coupe de France long circuit",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2005-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"},
         {"dateDebut": "2005-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "finaleB": "2"}
@@ -348,6 +393,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2005-01-03", "circuit": "Lavelanet", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
@@ -355,6 +401,7 @@
     {
       "nom": "Grand Prix FFSA",
       "categorie": "ICC",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2005-01-04", "circuit": "Essay", "chrono": "", "cumul": "", "prefinale": "", "finale": "15"}
       ]
@@ -362,18 +409,21 @@
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "2",
       "annee": 2004
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "3",
       "annee": 2004
     },
     {
       "nom": "Coupe de France long circuit",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2004-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "14"},
         {"dateDebut": "2004-01-02", "circuit": "Carole", "chrono": "", "cumul": "", "prefinale": "", "finale": "6"}
@@ -382,6 +432,7 @@
     {
       "nom": "Trophée Kart Mag",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2004-01-03", "circuit": "Laval", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
       ]
@@ -389,6 +440,7 @@
     {
       "nom": "Coupe de France",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2004-01-04", "circuit": "Septfontaine", "chrono": "", "cumul": "", "prefinale": "", "finale": "34"}
       ]
@@ -396,18 +448,21 @@
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "1",
       "annee": 2003
     },
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "10",
       "annee": 2003
     },
     {
       "nom": "Coupe de France long circuit",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2003-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "finaleB": "1"}
       ]
@@ -415,18 +470,21 @@
     {
       "nom": "Championnat de l'ouest",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "8",
       "annee": 2002
     },
     {
       "nom": "Trophée de Bretagne",
       "categorie": "N125",
+      "niveau": "regional",
       "resultat": "3",
       "annee": 2002
     },
     {
       "nom": "Trophée des Nations",
       "categorie": "N125",
+      "niveau": "national",
       "courses": [
         {"dateDebut": "2002-01-01", "circuit": "Croix en Ternois", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
@@ -434,6 +492,7 @@
     {
       "nom": "Trophée de Bretagne",
       "categorie": "Cadet",
+      "niveau": "regional",
       "resultat": "5",
       "annee": 2000
     }

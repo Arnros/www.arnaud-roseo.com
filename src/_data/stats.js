@@ -32,18 +32,40 @@ module.exports = function() {
 	let totalPodiums = 0;
 	let totalVictoires = 0;
 	let top10Nationaux = 0;
+	let top3Regionaux = 0;
+	let participationsMondiaux = 0;
 	const circuits = new Set();
 	const yearsWithCourses = new Set();
 	const titresRegionaux = new Set();
 
 	resultats.competitions.forEach(comp => {
-		// Compter les TOP 10 nationaux (Championnat de France)
-		if (comp.nom.toLowerCase().includes('championnat de france') && isTop10(comp.resultat)) {
-			top10Nationaux++;
+		const niveau = comp.niveau;
+
+		// Compter les participations aux mondiaux
+		if (niveau === 'international') {
+			participationsMondiaux++;
 		}
 
-		// Compter les titres régionaux (P1 au championnat de l'ouest ou trophée de Bretagne)
-		if (isVictoire(comp.resultat) && (comp.nom.includes('ouest') || comp.nom.includes('Bretagne'))) {
+		// Compter les TOP 10 nationaux (résultat championnat ou finale)
+		if (niveau === 'national') {
+			if (isTop10(comp.resultat)) {
+				top10Nationaux++;
+			} else if (comp.courses) {
+				comp.courses.forEach(c => {
+					if (isTop10(c.finale)) {
+						top10Nationaux++;
+					}
+				});
+			}
+		}
+
+		// Compter les TOP 3 régionaux
+		if (niveau === 'regional' && isPodium(comp.resultat)) {
+			top3Regionaux++;
+		}
+
+		// Compter les titres régionaux (P1)
+		if (niveau === 'regional' && isVictoire(comp.resultat)) {
 			const year = comp.annee || (comp.courses && comp.courses.length > 0 ? getYear(comp.courses[0].dateDebut) : null);
 			if (year) titresRegionaux.add(year + '-' + comp.nom);
 		}
@@ -84,6 +106,8 @@ module.exports = function() {
 		victoires: totalVictoires,
 		circuits: circuits.size,
 		titresRegionaux: titresRegionaux.size,
-		top10Nationaux
+		top3Regionaux,
+		top10Nationaux,
+		participationsMondiaux
 	};
 };

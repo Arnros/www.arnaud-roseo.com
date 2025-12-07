@@ -408,20 +408,53 @@
 		}
 	}
 
+	function isTop10(val) {
+		if (!val) return false;
+		var m = val.match(/^(\d+)/);
+		if (m) return parseInt(m[1], 10) <= 10;
+		return false;
+	}
+
 	function computeAndRenderStats(data) {
 		if (!statsEl) return;
 
 		var totalCourses = 0;
 		var totalPodiums = 0;
-		var totalVictoires = 0;
+		var top3Regionaux = 0;
+		var top10Nationaux = 0;
+		var participationsMondiaux = 0;
 		var circuits = new Set();
 		var yearsWithCourses = new Set();
 
 		data.competitions.forEach(function(comp) {
+			var niveau = comp.niveau;
+
+			// Compter les participations aux mondiaux
+			if (niveau === 'international') {
+				participationsMondiaux++;
+			}
+
+			// Compter les TOP 10 nationaux
+			if (niveau === 'national') {
+				if (isTop10(comp.resultat)) {
+					top10Nationaux++;
+				} else if (comp.courses) {
+					comp.courses.forEach(function(c) {
+						if (isTop10(c.finale)) {
+							top10Nationaux++;
+						}
+					});
+				}
+			}
+
+			// Compter les TOP 3 régionaux
+			if (niveau === 'regional' && isPodium(comp.resultat)) {
+				top3Regionaux++;
+			}
+
 			// Compter les podiums des résultats de championnat
 			if (isPodium(comp.resultat)) {
 				totalPodiums++;
-				if (isVictoire(comp.resultat)) totalVictoires++;
 			}
 			if (comp.courses) {
 				comp.courses.forEach(function(c) {
@@ -431,20 +464,18 @@
 					if (year) yearsWithCourses.add(year);
 					if (isPodium(c.finale)) {
 						totalPodiums++;
-						if (isVictoire(c.finale)) totalVictoires++;
 					} else if (isPodium(c.finaleB)) {
 						totalPodiums++;
-						if (isVictoire(c.finaleB)) totalVictoires++;
 					}
 				});
 			}
 		});
 
 		statsEl.innerHTML = '<div class="stats-grid">' +
-			'<div class="stat-item"><span class="stat-value">' + yearsWithCourses.size + '</span><span class="stat-label">Saisons</span></div>' +
-			'<div class="stat-item"><span class="stat-value">' + totalCourses + '</span><span class="stat-label">Courses</span></div>' +
 			'<div class="stat-item"><span class="stat-value">' + totalPodiums + '</span><span class="stat-label">Podiums</span></div>' +
-			'<div class="stat-item"><span class="stat-value">' + totalVictoires + '</span><span class="stat-label">Victoires</span></div>' +
+			'<div class="stat-item"><span class="stat-value">' + top3Regionaux + '</span><span class="stat-label">TOP 3 régionaux</span></div>' +
+			'<div class="stat-item"><span class="stat-value">' + top10Nationaux + '</span><span class="stat-label">TOP 10 France</span></div>' +
+			'<div class="stat-item"><span class="stat-value">' + participationsMondiaux + '</span><span class="stat-label">Championnats du monde</span></div>' +
 			'<div class="stat-item"><span class="stat-value">' + circuits.size + '</span><span class="stat-label">Circuits</span></div>' +
 			'</div>';
 	}
@@ -508,9 +539,17 @@
 							if (matchesCourse(course, filters)) {
 								filteredComp.courses.push(course);
 								totalRaces++;
-								if (isPodium(course.finale)) totalPodiums++;
+								if (isPodium(course.finale)) {
+									totalPodiums++;
+								} else if (isPodium(course.finaleB)) {
+									totalPodiums++;
+								}
 							}
 						});
+					}
+					// Compter le podium du résultat de championnat
+					if (isPodium(comp.resultat)) {
+						totalPodiums++;
 					}
 
 					if (filteredComp.courses.length > 0 || (matchesPod && !circuitVal)) {

@@ -41,11 +41,11 @@ module.exports = function() {
 	resultats.competitions.forEach(comp => {
 		const year = getYear(comp);
 		const pos = getPosition(comp.resultat);
-		const nomLower = comp.nom.toLowerCase();
+		const niveau = comp.niveau;
 		const circuit = getCircuit(comp);
 
-		// Participations aux mondiaux (Championnat du monde / Coupe du monde)
-		if (nomLower.includes('championnat du monde') || nomLower.includes('coupe du monde')) {
+		// Participations aux mondiaux
+		if (niveau === 'international') {
 			const medal = getMedal(pos);
 			events.push({
 				year,
@@ -56,20 +56,20 @@ module.exports = function() {
 				desc: pos ? (medal ? medal + ' ' : '') + pos + 'ème ' + formatCircuit(circuit) : 'Participation ' + formatCircuit(circuit)
 			});
 		}
-		// TOP 5 nationaux (Championnat de France - résultat championnat)
-		else if (nomLower.includes('championnat de france') && pos && pos <= 5) {
+		// TOP 5 nationaux (résultat championnat)
+		else if (niveau === 'national' && pos && pos <= 5) {
 			const medal = getMedal(pos);
 			events.push({
 				year,
 				type: 'national',
 				priority: 2,
 				icon: medal || '🏆',
-				title: pos + 'ème au Championnat de France ' + comp.categorie,
+				title: pos + 'ème au ' + comp.nom + ' ' + comp.categorie,
 				desc: formatCircuit(circuit)
 			});
 		}
-		// TOP 10 nationaux en finale (Championnat de France - résultat finale)
-		else if (nomLower.includes('championnat de france') && comp.courses) {
+		// TOP 10 nationaux en finale
+		else if (niveau === 'national' && comp.courses) {
 			comp.courses.forEach(course => {
 				const finalePos = getPosition(course.finale);
 				if (finalePos && finalePos <= 10) {
@@ -80,14 +80,14 @@ module.exports = function() {
 						type: 'national',
 						priority: 2,
 						icon: medal || '🏆',
-						title: finalePos + 'ème en finale du Championnat de France ' + comp.categorie,
+						title: finalePos + 'ème en finale ' + comp.nom + ' ' + comp.categorie,
 						desc: formatCircuit(courseCircuit)
 					});
 				}
 			});
 		}
-		// Podiums régionaux (Championnat de l'ouest ou Trophée de Bretagne)
-		else if ((nomLower.includes('ouest') || nomLower.includes('bretagne')) && pos && pos <= 3) {
+		// Podiums régionaux
+		if (niveau === 'regional' && pos && pos <= 3) {
 			const medal = getMedal(pos);
 			let title = '';
 			if (pos === 1) {
