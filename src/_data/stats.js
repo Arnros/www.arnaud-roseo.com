@@ -2,17 +2,9 @@ const resultats = require('../data/resultats.json');
 
 function isPodium(val) {
 	if (!val) return false;
-	const v = val.toLowerCase();
-	if (v === '1er' || v === 'vainqueur') return true;
 	const m = val.match(/^(\d+)/);
 	if (m) return parseInt(m[1]) <= 3;
 	return false;
-}
-
-function isVictoire(val) {
-	if (!val) return false;
-	const v = val.toLowerCase();
-	return v === '1' || v === '1er' || v.includes('vainqueur');
 }
 
 function isTop10(val) {
@@ -23,15 +15,11 @@ function isTop10(val) {
 }
 
 module.exports = function() {
-	let totalCourses = 0;
 	let totalPodiums = 0;
-	let totalVictoires = 0;
 	let top10Nationaux = 0;
 	let top3Regionaux = 0;
 	let participationsMondiaux = 0;
 	const circuits = new Set();
-	const yearsWithCourses = new Set();
-	const titresRegionaux = new Set();
 
 	resultats.competitions.forEach(comp => {
 		const niveau = comp.niveau;
@@ -59,30 +47,18 @@ module.exports = function() {
 			top3Regionaux++;
 		}
 
-		// Compter les titres régionaux (P1)
-		if (niveau === 'regional' && isVictoire(comp.resultat)) {
-			if (comp.annee) titresRegionaux.add(comp.annee + '-' + comp.nom);
-		}
-
 		// Compter les podiums des résultats de championnat
 		if (isPodium(comp.resultat)) {
 			totalPodiums++;
-			if (isVictoire(comp.resultat)) totalVictoires++;
 		}
-
-		// Compter les années avec courses
-		if (comp.annee) yearsWithCourses.add(comp.annee);
 
 		if (comp.courses) {
 			comp.courses.forEach(c => {
-				totalCourses++;
 				if (c.circuit) circuits.add(c.circuit);
 				if (isPodium(c.finale)) {
 					totalPodiums++;
-					if (isVictoire(c.finale)) totalVictoires++;
 				} else if (isPodium(c.finaleB)) {
 					totalPodiums++;
-					if (isVictoire(c.finaleB)) totalVictoires++;
 				}
 			});
 		}
@@ -95,12 +71,8 @@ module.exports = function() {
 
 	return {
 		anneesExperience,
-		saisons: yearsWithCourses.size,
-		courses: totalCourses,
 		podiums: totalPodiums,
-		victoires: totalVictoires,
 		circuits: circuits.size,
-		titresRegionaux: titresRegionaux.size,
 		top3Regionaux,
 		top10Nationaux,
 		participationsMondiaux

@@ -112,11 +112,6 @@
 			return val;
 		}
 
-		// 1er / vainqueur - badge or
-		if (valLower === '1er' || valLower === 'vainqueur') {
-			return '<span class="position-badge position-1">P1</span>';
-		}
-
 		// Valeur numérique ou commençant par un nombre
 		var match = val.match(/^(\d+)/);
 		if (match) {
@@ -124,7 +119,6 @@
 			var reste = val.substring(num.length).trim();
 			var badgeClass = 'position-badge';
 			var numInt = parseInt(num, 10);
-			// Toujours colorer les positions 1, 2, 3
 			if (numInt <= 3) {
 				badgeClass += ' position-' + num;
 			}
@@ -132,7 +126,7 @@
 			return reste ? badge + ' ' + reste : badge;
 		}
 
-		// Autres valeurs textuelles (ex: "coupe CRK")
+		// Autres valeurs textuelles
 		return val;
 	}
 
@@ -158,16 +152,9 @@
 		return val;
 	}
 
-	function isVictoire(result) {
-		var r = (result || '').toLowerCase();
-		return r === '1' || r === '1er' || r.indexOf('vainqueur') !== -1;
-	}
-
 	// Détecter si une position est un podium (1, 2 ou 3)
 	function isPodium(val) {
 		if (!val) return false;
-		var valLower = val.toLowerCase();
-		if (valLower === '1er' || valLower === 'vainqueur') return true;
 		var match = val.match(/^(\d+)/);
 		if (match) {
 			var num = parseInt(match[1], 10);
