@@ -7,13 +7,6 @@ function getPosition(val) {
 	return null;
 }
 
-function getYear(comp) {
-	if (comp.annee) return comp.annee;
-	if (comp.courses && comp.courses.length > 0 && comp.courses[0].dateDebut) {
-		return parseInt(comp.courses[0].dateDebut.substring(0, 4), 10);
-	}
-	return null;
-}
 
 function getCircuit(comp) {
 	if (comp.courses && comp.courses.length > 0 && comp.courses[0].circuit) {
@@ -39,7 +32,7 @@ module.exports = function() {
 	const events = [];
 
 	resultats.competitions.forEach(comp => {
-		const year = getYear(comp);
+		const year = comp.annee;
 		const pos = getPosition(comp.resultat);
 		const niveau = comp.niveau;
 		const circuit = getCircuit(comp);

@@ -22,11 +22,6 @@ function isTop10(val) {
 	return false;
 }
 
-function getYear(dateStr) {
-	if (!dateStr) return null;
-	return parseInt(dateStr.substring(0, 4), 10);
-}
-
 module.exports = function() {
 	let totalCourses = 0;
 	let totalPodiums = 0;
@@ -66,8 +61,7 @@ module.exports = function() {
 
 		// Compter les titres régionaux (P1)
 		if (niveau === 'regional' && isVictoire(comp.resultat)) {
-			const year = comp.annee || (comp.courses && comp.courses.length > 0 ? getYear(comp.courses[0].dateDebut) : null);
-			if (year) titresRegionaux.add(year + '-' + comp.nom);
+			if (comp.annee) titresRegionaux.add(comp.annee + '-' + comp.nom);
 		}
 
 		// Compter les podiums des résultats de championnat
@@ -76,12 +70,13 @@ module.exports = function() {
 			if (isVictoire(comp.resultat)) totalVictoires++;
 		}
 
+		// Compter les années avec courses
+		if (comp.annee) yearsWithCourses.add(comp.annee);
+
 		if (comp.courses) {
 			comp.courses.forEach(c => {
 				totalCourses++;
 				if (c.circuit) circuits.add(c.circuit);
-				const year = getYear(c.dateDebut);
-				if (year) yearsWithCourses.add(year);
 				if (isPodium(c.finale)) {
 					totalPodiums++;
 					if (isVictoire(c.finale)) totalVictoires++;
