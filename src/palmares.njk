@@ -26,80 +26,26 @@ schema:
 		<div class="section-header fade-in">
 			<span class="section-label">Carrière</span>
 			<h1 class="section-title">Palmarès</h1>
-			<p class="section-description">25 années de compétition au plus haut niveau</p>
+			<p class="section-description">{{ stats.anneesExperience }} années de compétition au plus haut niveau</p>
 		</div>
 
 		<div class="timeline fade-in">
-			<div class="timeline-item">
+			{%- for event in palmares %}
+			<div class="timeline-item timeline-{{ event.type }}">
 				<div class="timeline-content">
-					<span class="timeline-year">2022</span>
-					<h3 class="timeline-title">Coupe du monde KZ2</h3>
-					<p class="timeline-desc">17ème au Mans</p>
+					{%- if event.showYear %}
+					<span class="timeline-year">{{ event.year }}</span>
+					{%- else %}
+					<span class="timeline-year timeline-year-hidden">{{ event.year }}</span>
+					{%- endif %}
+					<span class="timeline-icon">{{ event.icon }}</span>
+					<h3 class="timeline-title">{{ event.title }}</h3>
+					{%- if event.desc %}
+					<p class="timeline-desc">{{ event.desc }}</p>
+					{%- endif %}
 				</div>
 			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2018</span>
-					<h3 class="timeline-title">Vice-champion de l'Ouest KZ2 Master</h3>
-					<p class="timeline-desc">5ème au championnat de France à Varennes/Allier</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2017</span>
-					<h3 class="timeline-title">Vice-champion de l'Ouest KZ2</h3>
-					<p class="timeline-desc">3ème Coupe de la ville au championnat de France</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2016</span>
-					<h3 class="timeline-title">Champion de l'Ouest KZ2</h3>
-					<p class="timeline-desc">Victoire en préfinale et finale au Mans</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2015</span>
-					<h3 class="timeline-title">Championnat du monde KZ2</h3>
-					<p class="timeline-desc">Participation au Mans</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2013</span>
-					<h3 class="timeline-title">Trophée de Bretagne KZ125</h3>
-					<p class="timeline-desc">Vainqueur - 5ème au Trophée Kart Mag</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2008</span>
-					<h3 class="timeline-title">Vice-champion de l'Ouest KZ125</h3>
-					<p class="timeline-desc">3ème coupe CRK à la Coupe de France</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2004</span>
-					<h3 class="timeline-title">Vice-champion Trophée de Bretagne N125</h3>
-					<p class="timeline-desc">3ème au championnat de l'Ouest</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2003</span>
-					<h3 class="timeline-title">Champion Trophée de Bretagne N125</h3>
-					<p class="timeline-desc">Vainqueur Coupe de la ville à Croix en Ternois</p>
-				</div>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-content">
-					<span class="timeline-year">2000</span>
-					<h3 class="timeline-title">Débuts en karting</h3>
-					<p class="timeline-desc">5ème au Trophée de Bretagne en catégorie Cadet</p>
-				</div>
-			</div>
+			{%- endfor %}
 		</div>
 
 		<div class="section-header fade-in" style="margin-top: 4rem;">

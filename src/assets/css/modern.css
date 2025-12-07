@@ -1707,6 +1707,29 @@ blockquote {
 	margin: 0;
 }
 
+.timeline-icon {
+	font-size: 1.5rem;
+	margin-right: .5rem;
+	vertical-align: middle;
+}
+
+.timeline-year-hidden {
+	visibility: hidden;
+}
+
+.timeline-item + .timeline-item:has(.timeline-year-hidden) {
+	margin-top: -2rem;
+}
+
+/* Réduire l'espacement pour les événements de la même année */
+.timeline-item:has(.timeline-year-hidden) {
+	margin-bottom: 1.5rem;
+}
+
+.timeline-item:has(.timeline-year-hidden) .timeline-content {
+	border-left: 3px solid var(--color-primary);
+}
+
 @media (max-width: 768px) {
 	.timeline::before {
 		left: 20px;
