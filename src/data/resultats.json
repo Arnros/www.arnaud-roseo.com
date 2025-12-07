@@ -187,7 +187,7 @@
       "niveau": "national",
       "annee": 2016,
       "courses": [
-        {"dateDebut": "2016-07-22", "dateFin": "2016-07-24", "circuit": "Varennes-sur-Allier", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "18", "finale": "20"}
+        {"dateDebut": "2016-07-22", "dateFin": "2016-07-24", "circuit": "Varennes-sur-Allier", "pays": "FR", "chrono": "29", "cumul": "36", "prefinale": "18", "finale": "20"}
       ]
     },
     {
@@ -219,10 +219,11 @@
       "nom": "Stars of Karting",
       "categorie": "KZ2",
       "niveau": "national",
+      "resultat": "28",
       "annee": 2015,
       "courses": [
-        {"dateDebut": "2015-02-28", "dateFin": "2015-03-01", "circuit": "Laval", "pays": "FR", "manche": "1/3", "chrono": "13", "cumul": "11", "prefinale": "14", "finale": "21"},
-        {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "circuit": "Varennes-sur-Allier", "pays": "FR", "manche": "2/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "29"}
+        {"dateDebut": "2015-02-28", "dateFin": "2015-03-01", "circuit": "Laval", "pays": "FR", "manche": "1/3", "chrono": "13", "cumul": "11", "prefinale": "14", "finale": "21", "dnf": true},
+        {"dateDebut": "2015-07-17", "dateFin": "2015-07-19", "circuit": "Varennes-sur-Allier", "pays": "FR", "manche": "2/3", "chrono": "38", "cumul": "41", "prefinale": "31", "finale": "29"}
       ]
     },
     {
@@ -267,18 +268,9 @@
       "niveau": "national",
       "annee": 2014,
       "courses": [
-        {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "circuit": "Angerville", "pays": "FR", "manche": "1/3", "chrono": "", "cumul": "", "prefinale": "11", "finale": "19"},
+        {"dateDebut": "2014-05-24", "dateFin": "2014-05-25", "circuit": "Angerville", "pays": "FR", "manche": "1/3", "chrono": "21", "cumul": "17", "prefinale": "11", "finale": "19"},
         {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "pays": "FR", "manche": "2/3", "chrono": "", "cumul": "", "finaleB": "3"},
         {"dateDebut": "2014-11-01", "dateFin": "2014-11-02", "circuit": "Laval", "pays": "FR", "manche": "3/3", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
-      ]
-    },
-    {
-      "nom": "Trophée Kart Mag",
-      "categorie": "KZ125",
-      "niveau": "national",
-      "annee": 2014,
-      "courses": [
-        {"dateDebut": "2014-07-19", "dateFin": "2014-07-20", "circuit": "Pers", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "7"}
       ]
     },
     {
