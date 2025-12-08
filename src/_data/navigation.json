@@ -1,19 +1,19 @@
 {
   "main": [
-    { "text": "Bienvenue", "url": "/#bienvenue" },
-    { "text": "Palmarès", "url": "/palmares/" },
     { "text": "Résultats", "url": "/resultats/" },
     { "text": "Calendrier", "url": "/#calendrier" },
+    { "text": "Palmarès", "url": "/palmares/" },
     { "text": "Simulateur", "url": "/simulateur/" },
+    { "text": "Galerie", "url": "/#photos" },
     { "text": "Contact", "url": "/#contact" }
   ],
   "mobile": [
     { "text": "Accueil", "url": "/" },
-    { "text": "Palmarès", "url": "/palmares/" },
     { "text": "Résultats", "url": "/resultats/" },
     { "text": "Calendrier", "url": "/#calendrier" },
+    { "text": "Palmarès", "url": "/palmares/" },
     { "text": "Simulateur", "url": "/simulateur/" },
-    { "text": "Photos", "url": "/#photos" },
+    { "text": "Galerie", "url": "/#photos" },
     { "text": "Contact", "url": "/#contact" }
   ]
 }
