@@ -48,21 +48,15 @@
 	// Colonnes à ignorer (métadonnées et colonnes affichées dans l'en-tête)
 	var ignoredColumns = ['dateDebut', 'dateFin', 'manche', 'annee', 'nom', 'courses', 'competition', 'dnf', 'annulee', 'pays'];
 
-	// Emoji drapeaux par code pays
-	var countryFlags = {
-		'FR': '🇫🇷',
-		'IT': '🇮🇹',
-		'DE': '🇩🇪',
-		'BE': '🇧🇪',
-		'ES': '🇪🇸',
-		'GB': '🇬🇧',
-		'NL': '🇳🇱',
-		'PT': '🇵🇹'
-	};
-
 	// Convertir un code pays en emoji drapeau
 	function getFlag(countryCode) {
-		return countryFlags[countryCode] || '';
+		if (!countryCode || countryCode.length !== 2) return '';
+		// Convertir le code pays en emoji drapeau via les Regional Indicator Symbols
+		var firstChar = String.fromCodePoint(0x1F1E6 + countryCode.charCodeAt(0) - 65);
+		var secondChar = String.fromCodePoint(0x1F1E6 + countryCode.charCodeAt(1) - 65);
+		var emoji = firstChar + secondChar;
+		// Retourner l'emoji avec le code pays en fallback pour les navigateurs qui ne supportent pas les drapeaux
+		return '<span class="flag-emoji" title="' + countryCode + '">' + emoji + '</span>';
 	}
 
 	// Colonnes de position (à afficher avec badge Pvaleur)
@@ -488,10 +482,6 @@
 								}
 							}
 						});
-					}
-					// Compter le podium du résultat de championnat
-					if (isPodium(comp.resultat)) {
-						totalPodiums++;
 					}
 
 					if (filteredComp.courses.length > 0 || (matchesPod && !circuitVal)) {

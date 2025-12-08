@@ -2161,3 +2161,11 @@ blockquote {
 		animation-delay: 0s;
 	}
 }
+
+/* ==========================================================================
+   Flag Emoji Fallback
+   ========================================================================== */
+
+.flag-emoji {
+	font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+}
