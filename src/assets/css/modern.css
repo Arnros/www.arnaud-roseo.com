@@ -1741,7 +1741,7 @@ blockquote {
 	content: '';
 	position: absolute;
 	right: -8px;
-	top: 0;
+	top: 1.5rem;
 	width: 16px;
 	height: 16px;
 	background: var(--color-primary);
@@ -1752,6 +1752,21 @@ blockquote {
 .timeline-item:nth-child(even)::before {
 	right: auto;
 	left: -8px;
+}
+
+.timeline-year {
+	position: absolute;
+	top: 0;
+	right: calc(100% + 2rem);
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--color-primary);
+	white-space: nowrap;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+	right: auto;
+	left: calc(100% + 2rem);
 }
 
 .timeline-content {
@@ -1765,14 +1780,6 @@ blockquote {
 .timeline-content:hover {
 	border-color: var(--color-primary);
 	transform: translateY(-4px);
-}
-
-.timeline-year {
-	display: inline-block;
-	font-size: .875rem;
-	font-weight: 600;
-	color: var(--color-primary-light);
-	margin-bottom: .5rem;
 }
 
 .timeline-title {
@@ -1793,20 +1800,13 @@ blockquote {
 	vertical-align: middle;
 }
 
-.timeline-year-hidden {
-	visibility: hidden;
-}
-
-.timeline-item + .timeline-item:has(.timeline-year-hidden) {
-	margin-top: -2rem;
-}
-
 /* Réduire l'espacement pour les événements de la même année */
-.timeline-item:has(.timeline-year-hidden) {
+.timeline-item-same-year {
 	margin-bottom: 1.5rem;
+	margin-top: -1.5rem;
 }
 
-.timeline-item:has(.timeline-year-hidden) .timeline-content {
+.timeline-item-same-year .timeline-content {
 	border-left: 3px solid var(--color-primary);
 }
 
@@ -1821,11 +1821,21 @@ blockquote {
 		margin-left: 0;
 		padding-left: 50px;
 		padding-right: 0;
+		padding-top: 2rem;
 	}
 
 	.timeline-item::before,
 	.timeline-item:nth-child(even)::before {
 		left: 12px;
+		right: auto;
+		top: 2.5rem;
+	}
+
+	.timeline-year,
+	.timeline-item:nth-child(even) .timeline-year {
+		position: absolute;
+		top: 0;
+		left: 50px;
 		right: auto;
 	}
 

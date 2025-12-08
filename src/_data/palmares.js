@@ -83,12 +83,35 @@ module.exports = function() {
 		if (niveau === 'regional' && pos && pos <= 3) {
 			const medal = getMedal(pos);
 			let title = '';
-			if (pos === 1) {
-				title = 'Champion ' + comp.nom.replace("Championnat de l'", '').replace('Trophée de ', '');
-			} else if (pos === 2) {
-				title = 'Vice-champion ' + comp.nom.replace("Championnat de l'", '').replace('Trophée de ', '');
+			let region = comp.nom;
+
+			// Extraire le nom de la région/trophée
+			if (comp.nom.startsWith("Championnat de l'")) {
+				region = comp.nom.replace("Championnat de l'", '');
+				if (pos === 1) {
+					title = "Champion de l'" + region;
+				} else if (pos === 2) {
+					title = "Vice-champion de l'" + region;
+				} else {
+					title = "3ème du Championnat de l'" + region;
+				}
+			} else if (comp.nom.startsWith('Trophée de ')) {
+				region = comp.nom.replace('Trophée de ', '');
+				if (pos === 1) {
+					title = 'Vainqueur du Trophée de ' + region;
+				} else if (pos === 2) {
+					title = '2ème du Trophée de ' + region;
+				} else {
+					title = '3ème du Trophée de ' + region;
+				}
+			} else if (comp.nom.startsWith('Trophée ')) {
+				if (pos === 1) {
+					title = 'Vainqueur du ' + comp.nom;
+				} else {
+					title = pos + 'ème du ' + comp.nom;
+				}
 			} else {
-				title = '3ème ' + comp.nom;
+				title = pos + 'ème ' + comp.nom;
 			}
 			title += ' ' + comp.categorie;
 

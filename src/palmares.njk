@@ -31,13 +31,11 @@ schema:
 
 		<div class="timeline fade-in">
 			{%- for event in palmares %}
-			<div class="timeline-item timeline-{{ event.type }}">
+			<div class="timeline-item timeline-{{ event.type }}{% if not event.showYear %} timeline-item-same-year{% endif %}">
+				{%- if event.showYear %}
+				<span class="timeline-year">{{ event.year }}</span>
+				{%- endif %}
 				<div class="timeline-content">
-					{%- if event.showYear %}
-					<span class="timeline-year">{{ event.year }}</span>
-					{%- else %}
-					<span class="timeline-year timeline-year-hidden">{{ event.year }}</span>
-					{%- endif %}
 					<span class="timeline-icon">{{ event.icon }}</span>
 					<h3 class="timeline-title">{{ event.title }}</h3>
 					{%- if event.desc %}
