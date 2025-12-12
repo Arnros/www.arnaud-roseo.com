@@ -381,7 +381,7 @@
       "niveau": "national",
       "annee": 2006,
       "courses": [
-        {"dateDebut": "2006-01-01", "circuit": "Carole", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+        {"dateDebut": "2006-06-11", "dateFin": "2006-06-12", "circuit": "Carole", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
     },
     {
@@ -467,7 +467,7 @@
       "niveau": "national",
       "annee": 2004,
       "courses": [
-        {"dateDebut": "2004-01-03", "circuit": "Laval", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
+        {"dateDebut": "2004-07-03", "circuit": "Laval", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "5"}
       ]
     },
     {
@@ -476,7 +476,7 @@
       "niveau": "national",
       "annee": 2004,
       "courses": [
-        {"dateDebut": "2004-01-04", "circuit": "Septfontaine", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "34"}
+        {"dateDebut": "2004-09-01", "circuit": "Septfontaine", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "34"}
       ]
     },
     {
@@ -522,7 +522,7 @@
       "niveau": "national",
       "annee": 2002,
       "courses": [
-        {"dateDebut": "2002-01-01", "circuit": "Croix-en-Ternois", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+        {"dateDebut": "2002-08-03",, "dateFin": "2002-08-04" "circuit": "Croix-en-Ternois", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
     },
     {
@@ -537,3 +537,4 @@
     "2001": "Première saison en N125, n'ayant pas encore l'âge de rouler en course, ce fut une année d'entraînement."
   }
 }
+
