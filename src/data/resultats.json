@@ -522,7 +522,7 @@
       "niveau": "national",
       "annee": 2002,
       "courses": [
-        {"dateDebut": "2002-08-03",, "dateFin": "2002-08-04" "circuit": "Croix-en-Ternois", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
+        {"dateDebut": "2002-08-03", "dateFin": "2002-08-04", "circuit": "Croix-en-Ternois", "pays": "FR", "chrono": "", "cumul": "", "prefinale": "", "finale": "11"}
       ]
     },
     {
@@ -537,4 +537,5 @@
     "2001": "Première saison en N125, n'ayant pas encore l'âge de rouler en course, ce fut une année d'entraînement."
   }
 }
+
 
